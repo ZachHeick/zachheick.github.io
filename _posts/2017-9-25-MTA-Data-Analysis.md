@@ -22,15 +22,15 @@ Once cleaned, the data can now be plotted and analyzed to help us come up with o
 
 ### Analyze the Data and Provide Clear Recommendations
 
-![Monthly Entries per Station](https://zachHeick.github.io/images/monthly-entries-per-station.png){: .center-image }
+![Monthly Entries per Station](https://zachheick.github.io/images/monthly-entries-per-station.png){: .center-image }
 
 Clean data allows us to group by the linename and station name to get the total entries for that station in May 2017. We wanted to break this down further and find which days of the week are busieset.
 
-![Entries by day per Station](https://zachHeick.github.io/images/entries-by-day-per-station.png){: .center-image }
+![Entries by day per Station](https://zachheick.github.io/images/entries-by-day-per-station.png){: .center-image }
 
 The x-axis is each day in May 2017 and the y-axis is the total entries at a station on that day. The high and wide peaks show that weekdays are much busier than the low and narrow values, the weekend. This makes sense because most people work Monday through Friday and need to take the subway.
 
-![House Values and Entries per Station](https://zachHeick.github.io/images/housing-value-and-entries-per-station.png){: .center-image }
+![House Values and Entries per Station](https://zachheick.github.io/images/housing-value-and-entries-per-station.png){: .center-image }
 
 In order to maximize potential donations, we used housing value as a measurement of wealth. We took the busiest stations' zipcodes and matched them with the approximate Zillow estimate.  
 

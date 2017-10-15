@@ -5,7 +5,7 @@ title: Writing Faster Code with Cython
 
 Choosing a programming language when wanting to learn how to code can be overwhelming. There are [hundreds](https://en.wikipedia.org/wiki/List_of_programming_languages) of different languages out there, how do you know which one is best start out with?  
 
-![Programming Languages](https://zachHeick.github.io/images/programming_languages.jpg){: .center-image }  
+![Programming Languages](https://zachheick.github.io/images/programming_languages.jpg){: .center-image }  
 
 Like tools in a toolbox, certain languages are better suited for certain jobs. Many people (myself included) start with Python. It's straight forward syntax is easy to learn and read, and Python also encourages good programming habits through its focus on white space and indentation. The list goes on about what Python is great at, but like any programming language, it has tradeoffs. Specifically, Python is very slow when it comes to large calculations whereas languages like C and C++ are much faster. Cython helps Python overcome this problem. 
 
