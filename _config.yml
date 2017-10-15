@@ -1,5 +1,5 @@
 # Site settings
-title:       Test Title
+title:       Zach Heick
 email:       zheick9595@gmail.com
 author:      Zach Heick
 description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
@@ -51,7 +51,7 @@ facebook_appid:
 facebook_comments_number: 10
 
 # Social icons
-github_username:
+github_username: ZachHeick
 reddit_username:
 bitbucket_username:
 stackoverflow_id:
@@ -59,7 +59,7 @@ twitter_username:
 skype_username:
 steam_nickname:
 google_plus_id:
-linkedin_username:
+linkedin_username: zacharyheick
 angellist_username:
 medium_id:
 bitcoin_url:
