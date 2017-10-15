@@ -38,7 +38,8 @@
 .posts .post a:hover .post-meta,
 .posts .post a:hover .post-title,
 .posts .post a:hover .post-summary {
-  opacity: 0.20;
+  opacity: 1;
+  color: $blue;
 }
 
 .site-header {
