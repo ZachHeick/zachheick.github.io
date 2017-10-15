@@ -4,7 +4,7 @@ email:       zheick9595@gmail.com
 author:      Zach Heick
 description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
 baseurl:     ""
-url:         "http://pixyll.com"
+url:         "https://zachheick.github.io/"
 date_format: "%b %-d, %Y"
 header_pages:
  - about.md
@@ -20,10 +20,10 @@ google_tag_manager:
 bing_verification:
 
 # Optional features
-animated:             false
+animated:             True
 show_related_posts:   false
 show_post_footers:    false
-show_social_icons:    false
+show_social_icons:    True
 ajaxify_contact_form: false
 enable_mathjax: false
 extended_fonts: false
