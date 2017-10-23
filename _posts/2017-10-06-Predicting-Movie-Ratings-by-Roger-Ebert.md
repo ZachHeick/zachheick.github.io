@@ -94,7 +94,9 @@ print('Mad Max Fury Road:', model_fit.predict(Mad_Max_Fury_Road)[0])
 
 ## Thoughts about the Model, What I Learned, and Future Work  
 
-Overall, I'm happy with how my model turned out. The root mean squared error of 0.73 stars is a bit high, but when testing some movies that came out recently, the ratings did not seem unbelievable. Something significant that I learned was that even though a model could have good characteristics, such as a high adjusted R-squared or normally distributed residuals, it does not guarantee good performance when it comes to cross validation. For the future, I could improve this model by including data from other well known film critics. This model only had internet user ratings to compare to, but I think there could be some stronger correlations between Roger Ebert and other professional film critics.
+Overall, I'm happy with how my model turned out. The root mean squared error of 0.73 stars is a bit high, but when testing some movies that came out recently, the ratings did not seem unbelievable. Something significant that I learned was that even though a model could have good characteristics, such as a high adjusted R-squared or normally distributed residuals, it does not guarantee good performance when it comes to cross validation.  I also could have explored regularization techniques such as Lasso, Ridge, and Elastic Net in order to improve feature selection.     
+
+For the future, I could improve this model by including data from other well known film critics. This model only had internet user ratings to compare to, but I think there could be some stronger correlations between Roger Ebert and other professional film critics. 
 
 ## Project source  
 The source can be found on my [github](https://github.com/ZachHeick/Project_Luther).
