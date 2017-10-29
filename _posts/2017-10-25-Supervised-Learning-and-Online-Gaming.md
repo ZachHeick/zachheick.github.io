@@ -27,7 +27,7 @@ League of Legends is a multiplayer online battle arena (MOBA) video game publish
 
 ## Data and Assumptions  
 
-The data I used for this project was downloaded from Kaggle. All datasets were in CSV format and contained in-game stats and outcomes from 51490 ranked matches played on game version 7.17. The datasets also included descriptions about the 138 champions players can choose from. The data was stored in a PostgreSQL database.  
+The data I used for this project was downloaded from Kaggle. All datasets were in CSV format and contained in-game stats and outcomes from 51490 ranked matches played on game version 7.17. The datasets also included descriptions about the 138 champions players can choose from. Data was stored in a PostgreSQL database.  
 
 In order to focus on the game itself and not have to take into account the player behind the computer screen, I made a few assumptions:  
 
@@ -38,3 +38,15 @@ In order to focus on the game itself and not have to take into account the playe
 ## Feature Selection  
 
 ## Exploratory Analysis  
+
+![Picks and Bans by Champion Role](://zachheick.github.io/images/Project_McNulty_images/picks_and_bans_by_role.png){: .center-image}  
+
+![Picks and Bans by Champion Role](://zachheick.github.io/images/Project_McNulty_images/champion_pick_count_and_win_rate.png){: .center-image}  
+
+![Picks and Bans by Champion Role](://zachheick.github.io/images/Project_McNulty_images/most_picked_champions.png){: .center-image}  
+
+![Picks and Bans by Champion Role](://zachheick.github.io/images/Project_McNulty_images/most_banned_champions.png){: .center-image}  
+
+![Picks and Bans by Champion Role](://zachheick.github.io/images/Project_McNulty_images/most_picked_champions_with_bane_rate.png){: .center-image}  
+
+![Picks and Bans by Champion Role](://zachheick.github.io/images/Project_McNulty_images/summoner_spell_usage.png){: .center-image}  
