@@ -13,7 +13,7 @@ With this in mind, I was interested in exploring match data from the most popula
 
 ![League of Legends Screenshot](https://zachheick.github.io/images/Project_McNulty_images/lol_screenshot.jpg){: /center-image }  
 
-League of Legends is a multiplayer online battle arena (MOBA) video game published by Riot Games. The game consists of two teams of five human players. Each human player controls a champion with unique abilities and fights against the team of other players. The object of the game is destroy the opposing team's nexus, the final structure located in a base surrounded by other defensive structures that must be destroyed prior. Each League of Legends match is discrete.  
+**League of Legends** is a multiplayer online battle arena (MOBA) video game published by Riot Games. The game consists of two teams of five human players. Each human player controls a champion with unique abilities and fights against the team of other players. The object of the game is destroy the opposing team's nexus, the final structure located in a base surrounded by other defensive structures that must be destroyed prior. Each League of Legends match is discrete.  
 
 #### Terminology  
 
@@ -27,7 +27,7 @@ League of Legends is a multiplayer online battle arena (MOBA) video game publish
 
 ## Data and Assumptions  
 
-The data I used for this project was downloaded from Kaggle. All datasets were in CSV format and contained in-game stats and outcomes from 51490 ranked matches played on game version 7.17. These matches are *not* from professional play, but instead matches from regular players. The datasets also included descriptions about the 138 champions players can choose from. Data was stored in a PostgreSQL database.  
+The data I used for this project was downloaded from Kaggle and was in CSV format. The first dataset contained in-game stats and outcomes from 51490 ranked matches played on game version 7.17. These matches are *not* from professional play, but instead matches from regular players. This dataset was also a near perfect 50/50 balance. The other dataset included descriptions about the 138 champions players can choose from. Data was stored in a PostgreSQL database.  
 
 In order to focus on the game itself and not have to take into account the player behind the computer screen, I made a few assumptions:  
 
@@ -39,7 +39,7 @@ In order to focus on the game itself and not have to take into account the playe
 
 #### Champions and their Roles  
 
-In League of Legends there are two teams, usually referred to as “Blue team” and “Red team”. The team name simply determines the starting point of each team on the game map. There are five players on each team who can pick and control their own champion. Before players pick the champion they want to play, they are allowed to ban one champion away from the other team. This means that if a player on Blue team bans a champion, no one on the Red team can select that champion to play, and vice versa. Deciding between which champions to pick and ban from a pool of 138 champions can give your team distinct strengths and weaknesses in-game.
+In League of Legends there are two teams, usually referred to as <span class="blue">Blue team</span> and <span class="red">Red team</span>. The team name simply determines the starting point of each team on the game map. There are five players on each team who can pick and control their own champion. Before players pick the champion they want to play, they are allowed to ban one champion away from the other team. This means that if a player on Blue team bans a champion, no one on the Red team can select that champion to play, and vice versa. Deciding between which champions to pick and ban from a pool of 138 champions can give your team distinct strengths and weaknesses in-game.
 
 I wanted to explore the pick and ban rates of champions and their role, and examine their win rates to see if their are certain champions dominating the game.  
 
@@ -63,17 +63,29 @@ Janna and Twitch were both so popular and banned so frequently because of how we
 
 Once a match has started, there are multiple objectives that must be destroyed before reaching the nexus. Players must work together and decide which of these objectives should be taken first. Taking objectives first gives a team huge momentum in planning their next move and can be crucial to winning the match. 
 
-The **feature** **vector** included:  
+#### Feature Vectors and Target
+
+The feature vector included:  
 
   * The five picked champions and five banned champions for each team
   * The first team to get a kill  
   * The first team to destroy a turret  
   * The first team to kill the dragon  
-  * The first team to kill Rift Herald
+  * The first team to kill Rift Herald  
+
+The team champion columns were represented by the numeric ID of the champion. The objective columns contained value 0, 1, or 2. Value 0 represents no team getting this objective, and 1 and 2 for Blue team and Red team. The target value was Blue team or Red Team.  
 
 ## Predicting Match Outcomes  
 
-Once the data was cleaned and I had the features selected, I then wanted to explore multiple classification algorithms to use for my final prediction model.  
+#### Process and Algorithms  
+
+Once the data was cleaned and I had the features selected, I then wanted to explore multiple classification algorithms to use for my final prediction model. 
+
+#### Algorithm Analysis  
+
+#### How do I Choose an Algorithm?  
+
+#### Final Model  
 
 ## Final Thoughts, What I learned, and Future Work  
 
