@@ -37,6 +37,21 @@ In order to focus on the game itself and not have to take into account the playe
 
 ## Feature Selection  
 
+In League of Legends there are two teams, usually referred to as "Blue team" and "Red team". The team name simply determines the starting point of each team on the game map. There are five players on each team who can pick and control their own champion. Before players pick the champion they want to play, they are allowed to ban one champion away from the other team. This means that if a player on Blue team bans a champion, no one on the Red team can select that champion to play, and vice versa.  
+
+Once in the game, there are multiple objectives that must be destroyed before reaching the nexus. Players must work together and decide which of these objectives should be taken first. Taking objectives first gives a team huge momentum in planning their next move and can be crucial to winning the match. I wanted to see just how important it was to take certain objectives first.
+
+The feature vector included:  
+
+  * The five picked champions and five banned champions from Blue team
+  * The five picked champions and five banned champions from Red team
+  * The first team to get a kill  
+  * The first team to destroy a turret  
+  * The first team to kill the dragon  
+  * The first team to kill Rift Herald
+
+The target value was represented by a "1" for Blue team and a "2" for Red team.  
+
 ## Exploratory Analysis  
 
 ![Picks and Bans by Champion Role](https://zachheick.github.io/images/Project_McNulty_images/picks_and_bans_by_role.png){: .center-image}  
@@ -47,6 +62,6 @@ In order to focus on the game itself and not have to take into account the playe
 
 ![Most Banned Champions](https://zachheick.github.io/images/Project_McNulty_images/most_banned_champions.png){: .center-image}  
 
-![Most Picked Champions with Ban Rate](https://zachheick.github.io/images/Project_McNulty_images/most_picked_champions_with_bane_rate.png){: .center-image}  
+![Most Picked Champions with Ban Rate](https://zachheick.github.io/images/Project_McNulty_images/most_picked_champions_with_ban_rate.png){: .center-image}  
 
 ![Summoner Spell Usage](https://zachheick.github.io/images/Project_McNulty_images/summoner_spell_usage.png){: .center-image}  
