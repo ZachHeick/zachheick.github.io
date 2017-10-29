@@ -39,7 +39,7 @@ In order to focus on the game itself and not have to take into account the playe
 
 #### Champions and their Roles  
 
-In League of Legends there are two teams, usually referred to as <span class="blue">Blue team</span> and <span class="red">Red team</span>. The team name simply determines the starting point of each team on the game map. There are five players on each team who can pick and control their own champion. Before players pick the champion they want to play, they are allowed to ban one champion away from the other team. This means that if a player on Blue team bans a champion, no one on the Red team can select that champion to play, and vice versa. Deciding between which champions to pick and ban from a pool of 138 champions can give your team distinct strengths and weaknesses in-game.
+In League of Legends there are two teams, a <span class="blue">Blue team</span> and a <span class="red">Red team</span>. The team name simply determines the starting point of each team on the game map. There are five players on each team who can pick and control their own champion. Before players pick the champion they want to play, they are allowed to ban one champion away from the other team. This means that if a player on Blue team bans a champion, no one on the Red team can select that champion to play, and vice versa. Deciding between which champions to pick and ban from a pool of 138 champions can give your team distinct strengths and weaknesses in-game.
 
 I wanted to explore the pick and ban rates of champions and their role, and examine their win rates to see if their are certain champions dominating the game.  
 
@@ -79,13 +79,24 @@ The team champion columns were represented by the numeric ID of the champion. Th
 
 #### Process and Algorithms  
 
-Once the data was cleaned and I had the features selected, I then wanted to explore multiple classification algorithms to use for my final prediction model. 
+Once the data was cleaned and I had the features selected, I explored multiple classification algorithms to use for my final prediction model. For each algorithm, I selected and tuned the hyperparameter that returned the best accuracy score using Grid Search Cross Validation. I then plotted the learning curve of the algorithm using the best parameter value and recorded the final accuracy score of the algorithm. The algorithms and their hyperparameters:  
+
+  * Support Vector Machine: Budget  
+  * Decision Tree: Tree Depth and Criterion
+  * Random Forest: Depth and number of trees  
+  * Logistic Regression: Regularization Strength  
+  * Bernoulli Naive Bayes: None    
 
 #### Algorithm Analysis  
 
-#### How do I Choose an Algorithm?  
+![ROC Curves](https://zachheick.github.io/images/Project_McNulty_images/roc_curve.png){: .center-image}  
 
-#### Final Model  
+![Boxplot](https://zachheick.github.io/images/Project_McNulty_images/boxplot.png){: .center-image}  
+
+![Final Dataframe](https://zachheick.github.io/images/Project_McNulty_images/final_dataframe.png){: .center-image}  
+
+![SVM Learning Curve](https://zachheick.github.io/images/Project_McNulty_images/svm_learning_curve.png){: .center-image}  
+
 
 ## Final Thoughts, What I learned, and Future Work  
 
