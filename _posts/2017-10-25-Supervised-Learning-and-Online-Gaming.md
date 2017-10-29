@@ -39,14 +39,14 @@ In order to focus on the game itself and not have to take into account the playe
 
 ## Exploratory Analysis  
 
-![Picks and Bans by Champion Role](://zachheick.github.io/images/Project_McNulty_images/picks_and_bans_by_role.png){: .center-image}  
+![Picks and Bans by Champion Role](https://zachheick.github.io/images/Project_McNulty_images/picks_and_bans_by_role.png){: .center-image}  
 
-![Picks and Bans by Champion Role](://zachheick.github.io/images/Project_McNulty_images/champion_pick_count_and_win_rate.png){: .center-image}  
+![Champion Pick Count and Win Rate](https://zachheick.github.io/images/Project_McNulty_images/champion_pick_count_and_win_rate.png){: .center-image}  
 
-![Picks and Bans by Champion Role](://zachheick.github.io/images/Project_McNulty_images/most_picked_champions.png){: .center-image}  
+![Most Picked Champions](https://zachheick.github.io/images/Project_McNulty_images/most_picked_champions.png){: .center-image}  
 
-![Picks and Bans by Champion Role](://zachheick.github.io/images/Project_McNulty_images/most_banned_champions.png){: .center-image}  
+![Most Banned Champions](https://zachheick.github.io/images/Project_McNulty_images/most_banned_champions.png){: .center-image}  
 
-![Picks and Bans by Champion Role](://zachheick.github.io/images/Project_McNulty_images/most_picked_champions_with_bane_rate.png){: .center-image}  
+![Most Picked Champions with Ban Rate](https://zachheick.github.io/images/Project_McNulty_images/most_picked_champions_with_bane_rate.png){: .center-image}  
 
-![Picks and Bans by Champion Role](://zachheick.github.io/images/Project_McNulty_images/summoner_spell_usage.png){: .center-image}  
+![Summoner Spell Usage](https://zachheick.github.io/images/Project_McNulty_images/summoner_spell_usage.png){: .center-image}  
