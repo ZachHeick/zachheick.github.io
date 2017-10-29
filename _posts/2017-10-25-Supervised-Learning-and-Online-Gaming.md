@@ -3,9 +3,13 @@ layout: post
 title: Supervised Learning and Online Gaming   
 ---   
 
-In recent years, the professional video game scene has seen huge growth in both revenue and online stream numbers. Teams are competing for huge cash prizes, and with so much money on the line, these teams are now starting to use data science in order to provide themselves with the best win conditions for the respective game they're playing. The third project at Metis concentrated on exploring multiple supervised learning techniques to see what we could learn from datasets of our choice. With this in mind, I was interested in exploring match data from the most popular game in the world, *League* *of* *Legends*. I was curious to see if I could predict the winner of a match based on what champions each team picked and banned, as well as what objectives in the game were taken first.  
+In recent years, the professional video game scene has seen huge growth in both revenue and online stream numbers. Teams are competing for huge cash prizes, and with so much money on the line, these teams are now starting to use data science in order to provide themselves with the best win conditions for the respective game they're playing. The third project at Metis concentrated on exploring multiple supervised learning techniques to see what we could learn from datasets of our choice.  
 
 ![League of Legends Crowd](https://zachheick.github.io/images/Project_McNulty_images/lol_crowd.jpg){: .center-image }  
+
+With this in mind, I was interested in exploring match data from the most popular game in the world, *League* *of* *Legends*. I was curious to see if I could predict the winner of a match based on what champions each team picked and banned, as well as what objectives in the game were taken first.  
+
+![League of Legends Screenshot](https://zachheick.github.io/images/Project_McNulty_images/lol_screenshot.jpg){: /center-image }  
 
 ## What is League of Legends?  
 
@@ -21,4 +25,10 @@ League of Legends is a multiplayer online battle arena (MOBA) video game publish
   * **Nexus**: final defensive structure in a team's base, doing no damage to enemies
   * **Baron, Dragon, and Rift Herald**: neutral objectives located around the game map that teams can kill for in-game stat boosts
 
+## Data and Assumptions  
 
+The data I used for this project was downloaded from Kaggle. All datasets were in CSV format and contained in-game stats and outcomes from 51490 ranked matches played on game version 7.17. The datasets also included descriptions about the 138 champions players can choose from. The data was stored in a PostgreSQL database.
+
+## Feature Selection  
+
+## Exploratory Analysis  
