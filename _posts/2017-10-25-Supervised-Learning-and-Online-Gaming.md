@@ -119,6 +119,8 @@ The learning curve for SVM. The test accuracy levels off at about 22000 samples,
 
 ## Final Thoughts, What I learned, and Future Work  
 
+![Banner](https://zachheick.github.io/images/Project_McNulty_images/lol_banner.jpg){: .center-image} 
+
 I really enjoyed this project and working with different classification algorithms. Although there were no clear winners when it came to selecting an algorithm, it made me think critically about what was going on under the hood and how that could be affecting my results. When choosing an algorithm, a metric I did not consider looking into at the time was [Logarithmic Loss](https://www.kaggle.com/wiki/LogLoss), which measures the confidence of each prediction an algorithm is making.  
 
 While League of Legends is a team game, individual performance also influences the outcome of a match. Adding individual player stats such as gold per minute, experience points per minunte, kills, deaths, assists, and other actions per minute, could help improve the accuracy of the model. Also, champion synergy is important to consider when it comes to team composition. Having five champions with high win rates on one team does not necessarily mean that those champions will work well together. Finding an effective way to measure champion synergy could also improve the accuracy of the model.  
