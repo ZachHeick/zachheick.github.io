@@ -131,4 +131,4 @@ In conclusion, working together as a team and taking objectives first is more im
 
 ## Project Source  
 
-The source can be on my [github](https://github.com/ZachHeick/Project_McNulty).
+The source can be found on my [github](https://github.com/ZachHeick/Project_McNulty).
