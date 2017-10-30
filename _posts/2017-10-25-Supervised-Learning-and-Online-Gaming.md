@@ -91,7 +91,7 @@ Once the data was cleaned and I had the features selected, I explored multiple c
 
 ![ROC Curves](https://zachheick.github.io/images/Project_McNulty_images/roc_curve.png){: .center-image}  
 
-I first plotted the ROC cruve of each algorithm, but the curves were *very* similar.  
+I first plotted the ROC curve of each algorithm, but the curves were *very* similar.  
 
 ![Boxplot](https://zachheick.github.io/images/Project_McNulty_images/boxplot.png){: .center-image}  
 
@@ -99,7 +99,7 @@ I then used boxplots to get a better understanding of how the accuracy scores fr
 
 ![Final Dataframe](https://zachheick.github.io/images/Project_McNulty_images/final_dataframe.png){: .center-image}  
 
-I also was curious to see which games each algorithm was classifying incorrectly, in case I could either ensemble algorithms or one was performing completely different from the rest. I created a dataframe where each column represents an algorithm and the cell values are game IDs that were incorrectly classified.  
+I also was curious to see which games each algorithm was classifying incorrectly, in case I could either ensemble algorithms or one was performing completely different from the rest. I created a dataframe where each column represents an algorithm. The cell values are game IDs that were incorrectly classified.  
 
 Each algorithm seems to be nearly identical when it comes to their ROC curve, boxplot, and the games that are classified incorrectly. Because of this, I could not ensemble multiple algorithms for my final model, so how do I even choose one when they're all *so* similar?  It came down to three categores:  
 
@@ -107,7 +107,7 @@ Each algorithm seems to be nearly identical when it comes to their ROC curve, bo
   * Interpretability  
   * Computation Speed  
 
-In terms of accuracy, all algorithms performed identically, give or take 1%. Interpretability and computation speed is where algorithms started to differ. For this project, **Support Vector Machine** was the easiest to interpret and was relatively quick when it came to computing speed.  
+In terms of accuracy, all algorithms performed identically, give or take 1%. Interpretability and computation speed is where algorithms started to differ. For this project, **Support Vector Machine** was both easy to interpret and relatively quick when it came to computing speed. I chose this single algorithm for my final prediction model.    
 
 ![SVM Accuracy for C](https://zachheick.github.io/images/Project_McNulty_images/svm_accuracy.png){: .center-image}  
 
@@ -115,11 +115,15 @@ A graph of the accuracies of varying budget (C) values for SVM. A value of 0.000
 
 ![SVM Learning Curve](https://zachheick.github.io/images/Project_McNulty_images/svm_learning_curve.png){: .center-image}  
 
-The learning curve for SVM. The test accuracy levels off at around 72% with 22000 samples.  
+The learning curve for SVM. The test accuracy levels off at about 22000 samples, which means the model had enough data.  
 
 ## Final Thoughts, What I learned, and Future Work  
 
+I really enjoyed this project and working with different classification algorithms. Although there were no clear winners when it came to selecting an algorithm, it made me think critically about what was going on under the hood and how that could be affecting my results. When choosing an algorithm, a metric I did not consider looking into at the time was [Logarithmic Loss](https://www.kaggle.com/wiki/LogLoss), which measures the confidence of each prediction an algorithm is making.  
 
+While League of Legends is a team game, individual performance also influences the outcome of a match. Adding individual player stats such as gold per minute, experience points per minunte, kills, deaths, assists, and other actions per minute, could help improve the accuracy of the model. Also, champion synergy is important to consider when it comes to team composition. Having five champions with high win rates on one team does not necessarily mean that those champions will work well together. Finding an effective way to measure champion synergy could also improve the accuracy of the model.  
+
+In conclusion, working together as a team and taking objectives first is more important than just the champion picks and bans themselves. Or as the saying goes, **Team work makes the dream work**.
 
 ## Project Source  
 
