@@ -41,7 +41,7 @@ In order to focus on the game itself and not have to take into account the playe
 
 In League of Legends there are two teams, a <span class="blue">Blue team</span> and a <span class="red">Red team</span>. The team name simply determines the starting point of each team on the game map. There are five players on each team who can pick and control their own champion. Before players pick the champion they want to play, they are allowed to ban one champion away from the other team. This means that if a player on Blue team bans a champion, no one on the Red team can select that champion to play, and vice versa. Deciding between which champions to pick and ban from a pool of 138 champions can give your team distinct strengths and weaknesses in-game.
 
-I wanted to explore the pick and ban rates of champions and their role, and examine their win rates to see if their are certain champions dominating the game.  
+I wanted to explore the pick and ban rates of champions and their role, and examine their win rates to see if there are certain champions dominating the game.  
 
 ![Champion Pick Count and Win Rate](https://zachheick.github.io/images/Project_McNulty_images/champion_pick_count_and_win_rate.png){: .center-image}  
 
@@ -61,7 +61,7 @@ Janna and Twitch were both so popular and banned so frequently because of how we
 
 #### In-game Objectives  
 
-Once a match has started, there are multiple objectives that must be destroyed before reaching the nexus. Players must work together and decide which of these objectives should be taken first. Taking objectives first gives a team huge momentum in planning their next move and can be crucial to winning the match. 
+Once a match has started, there are multiple objectives that must be destroyed before reaching the nexus. Objectives include towers, the dragon, Rift Herald, and killing the other team. Players must work together and decide which of these objectives should be taken first. Taking objectives first gives a team huge momentum in planning their next move and can be crucial to winning the match. 
 
 #### Feature Vectors and Target
 
@@ -79,7 +79,7 @@ The team champion columns were represented by the numeric ID of the champion. Th
 
 #### Process and Algorithms  
 
-Once the data was cleaned and I had the features selected, I explored multiple classification algorithms to use for my final prediction model. For each algorithm, I selected and tuned the hyperparameter that returned the best accuracy score using Grid Search Cross Validation. I then plotted the learning curve of the algorithm using the best parameter value and recorded the final accuracy score of the algorithm. The algorithms and their hyperparameters:  
+Once the data was cleaned and I had the features selected, I explored multiple classification algorithms to use for my final prediction model. For each one, I selected and tuned the hyperparameter that returned the best accuracy score using Grid Search Cross Validation. I then plotted the learning curve of the algorithm using the best parameter value and recorded the final accuracy score. The algorithms and their hyperparameters:  
 
   * Support Vector Machine: Budget  
   * Decision Tree: Tree Depth and Criterion
@@ -87,19 +87,21 @@ Once the data was cleaned and I had the features selected, I explored multiple c
   * Logistic Regression: Regularization Strength  
   * Bernoulli Naive Bayes: None    
 
-#### Algorithm Analysis  
+#### Performance Analysis  
 
 ![ROC Curves](https://zachheick.github.io/images/Project_McNulty_images/roc_curve.png){: .center-image}  
 
-I first plotted the ROC curve of each algorithm, but the curves were *very* similar.  
+I first plotted the ROC curve of each algorithm. The curves were *very* similar.  
 
 ![Boxplot](https://zachheick.github.io/images/Project_McNulty_images/boxplot.png){: .center-image}  
 
-I then used boxplots to get a better understanding of how the accuracy scores from cross validation were distributed. These scores are from each algorithm's best parameter values in terms of accuracy.    
+I then used boxplots to get a better understanding of how the accuracy scores from cross validation were distributed. These scores were calculated using each algorithm's best parameter values.      
 
 ![Final Dataframe](https://zachheick.github.io/images/Project_McNulty_images/final_dataframe.png){: .center-image}  
 
 I also was curious to see which games each algorithm was classifying incorrectly, in case I could either ensemble algorithms or one was performing completely different from the rest. I created a dataframe where each column represents an algorithm. The cell values are game IDs that were incorrectly classified.  
+
+#### Choosing an Algorithm  
 
 Each algorithm seems to be nearly identical when it comes to their ROC curve, boxplot, and the games that are classified incorrectly. Because of this, I could not ensemble multiple algorithms for my final model, so how do I even choose one when they're all *so* similar?  It came down to three categores:  
 
@@ -107,7 +109,7 @@ Each algorithm seems to be nearly identical when it comes to their ROC curve, bo
   * Interpretability  
   * Computation Speed  
 
-In terms of accuracy, all algorithms performed identically, give or take 1%. Interpretability and computation speed is where algorithms started to differ. For this project, **Support Vector Machine** was both easy to interpret and relatively quick when it came to computing speed. I chose this single algorithm for my final prediction model.    
+In terms of accuracy, all algorithms performed identically, give or take 1%. Interpretability and computation speed is where they started to differ. For this project, **Support Vector Machine** was both easy to interpret and relatively quick when it came to computing speed. I chose this single algorithm for my final prediction model.    
 
 ![SVM Accuracy for C](https://zachheick.github.io/images/Project_McNulty_images/svm_accuracy.png){: .center-image}  
 
@@ -125,7 +127,7 @@ I really enjoyed this project and working with different classification algorith
 
 While League of Legends is a team game, individual performance also influences the outcome of a match. Adding individual player stats such as gold per minute, experience points per minunte, kills, deaths, assists, and other actions per minute, could help improve the accuracy of the model. Also, champion synergy is important to consider when it comes to team composition. Having five champions with high win rates on one team does not necessarily mean that those champions will work well together. Finding an effective way to measure champion synergy could also improve the accuracy of the model.  
 
-In conclusion, working together as a team and taking objectives first is more important than just the champion picks and bans themselves. Or as the saying goes, **Team work makes the dream work**.
+In conclusion, working together as a team and taking objectives first is more important than just the champion picks and bans themselves.  
 
 ## Project Source  
 
