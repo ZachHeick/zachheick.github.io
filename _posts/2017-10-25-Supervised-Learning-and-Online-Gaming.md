@@ -91,14 +91,35 @@ Once the data was cleaned and I had the features selected, I explored multiple c
 
 ![ROC Curves](https://zachheick.github.io/images/Project_McNulty_images/roc_curve.png){: .center-image}  
 
+I first plotted the ROC cruve of each algorithm, but the curves were *very* similar.  
+
 ![Boxplot](https://zachheick.github.io/images/Project_McNulty_images/boxplot.png){: .center-image}  
+
+I then used boxplots to get a better understanding of how the accuracy scores from cross validation were distributed. These scores are from each algorithm's best parameter values in terms of accuracy.    
 
 ![Final Dataframe](https://zachheick.github.io/images/Project_McNulty_images/final_dataframe.png){: .center-image}  
 
+I also was curious to see which games each algorithm was classifying incorrectly, in case I could either ensemble algorithms or one was performing completely different from the rest. I created a dataframe where each column represents an algorithm and the cell values are game IDs that were incorrectly classified.  
+
+Each algorithm seems to be nearly identical when it comes to their ROC curve, boxplot, and the games that are classified incorrectly. Because of this, I could not ensemble multiple algorithms for my final model, so how do I even choose one when they're all *so* similar?  It came down to three categores:  
+
+  * Accuracy of the algorithm  
+  * Interpretability  
+  * Computation Speed  
+
+In terms of accuracy, all algorithms performed identically, give or take 1%. Interpretability and computation speed is where algorithms started to differ. For this project, **Support Vector Machine** was the easiest to interpret and was relatively quick when it came to computing speed.  
+
+![SVM Accuracy for C](https://zachheick.github.io/images/Project_McNulty_images/svm_accuracy.png){: .center-image}  
+
+A graph of the accuracies of varying budget (C) values for SVM. A value of 0.0001 gave an accuracy of 71.7% during cross validation.  
+
 ![SVM Learning Curve](https://zachheick.github.io/images/Project_McNulty_images/svm_learning_curve.png){: .center-image}  
 
+The learning curve for SVM. The test accuracy levels off at around 72% with 22000 samples.  
 
 ## Final Thoughts, What I learned, and Future Work  
+
+
 
 ## Project Source  
 
