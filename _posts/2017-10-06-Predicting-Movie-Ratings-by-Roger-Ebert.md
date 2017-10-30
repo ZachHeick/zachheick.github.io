@@ -7,15 +7,13 @@ From entertaining B-movies to Hollywood summer blockbusters, I've always enjoyed
 
 ![Ebert Thumbs Up](https://zachheick.github.io/images/Project_Luther_images/ebert_thumbs_up.jpg){: .center-image }  
 
-## Strategy  
-
-#### Data Collection    
+## Data Collection    
 
 I used Python's BeautifulSoup and Selenium libraries to scrape data about the movies Ebert reviewed and rated from his [website](https://www.rogerebert.com). Once the data was scraped and cleaned, I realized that there might not be enough features to create an accurate model. I wanted other ratings to compare his to, so I scraped user ratings from IMDb. I also downloaded a dataset of user ratings from another large movie rating site, MovieLens. IMDb scores were on a scale of 0.0 to 10.0 and MovieLens scores were on a scale of 0.0 to 5.0. The IMDb and MovieLens data was cleaned and merged with Ebert's data into one dataset of 4749 total ratings.
 
 ![Final Dataset](https://zachheick.github.io/images/ebert_final_df.png){: .center-image }    
 
-#### Exploratory Analysis and Feature Selection   
+## Exploratory Analysis and Feature Selection   
 
 I took a look at Roger Ebert's rating distribution first. Ebert rates movies on a scale of zero to four stars, incrementing by halves. Looking at the bar plot, he gave almost half of the movies a 3 to 3.5 rating. Ebert also does not give too many movies a terrible rating of 0 to 0.5 stars.  
 
@@ -31,7 +29,7 @@ I took a look at the pair plot of the rest of the features to see if there was s
 
 Because of the difficulty finding correlations to Star_Score when looking at the pairplot, I looked at the correlation scores to get a better understanding.  
 
-#### The Linear Regression Model  
+## The Linear Regression Model  
 
 Some of my features were categorical. To prepare my dataframe for modeling, I needed to "dummy" these features. Features with multiple categories had their categories assigned as individual columns. A boolean value of 0 or 1 was used to indicate if a row fell into some category. I removed the Title column and the dataframe now only has numeric values. Next, I split the data up into training and test sets.  
   
@@ -75,7 +73,7 @@ I got a slightly higher root mean squared error on the out-of-sample data than t
 
 Looking at the model visualization, this model loses some accuracy as Ebert's rating decreases. Even at the higher ratings, the model did not perform terribly, but there's definately room for improvement.
 
-#### Predict Recent Movies  
+## Predict Recent Movies  
 
 With a finished model, I got some recent movies and plugged their values into the model to get a predicted rating out of four stars.  
 
