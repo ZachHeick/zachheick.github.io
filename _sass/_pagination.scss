@@ -6,12 +6,12 @@
 }
 
 .pagination a, .pagination .disabled {
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-  background: #e3e3e3;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background: #f1f1f1;
   border-radius: 0.1875em;
-  border: 1px solid #f3f3f3;
+  border: 1px solid #f1f1f1;
   color: #333333;
   padding: 1em 1.5em;
 }
