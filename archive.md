@@ -5,9 +5,6 @@ title: Archive
 tags: archive  
 ---  
 
-![archives](https://zachheick.github.io/images/archive_banner.jpg){: .center-image}  
-
-
 ### October 2017  
 
 Introduction to Graph Databases with Neo4j  

@@ -3,6 +3,4 @@ layout: post
 title: Introduction to Graph Databases wih Neo4j  
 ---  
 
-
-
-
+Coming soon.
