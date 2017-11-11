@@ -49,7 +49,7 @@ Most champions seem to have a win rate between 48% and 54%, with the exception o
 
 ![Most Picked Champions](https://zachheick.github.io/images/Project_McNulty_images/most_picked_champions.png){: .center-image}  
 
-Champions like Thresh and Lee Sin are popular because of how easily they fit into any team composition. It was surprising to see how popular the marksman role was.  
+Champions like Thresh and Lee Sin are popular because of how easily they fit into any team composition. It was surprising to see how popular the Marksman role was.  
 
 ![Most Banned Champions](https://zachheick.github.io/images/Project_McNulty_images/most_banned_champions.png){: .center-image}  
 
