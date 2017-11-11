@@ -5,7 +5,8 @@ title: Archive
 tags: archive  
 ---  
 
-You can access all of my blog posts below.  
+![archives](https://zachheick.github.io/images/archive_banner.jpg){: .center-image}  
+
 
 ### October 2017  
 
