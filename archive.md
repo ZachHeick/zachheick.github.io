@@ -1,8 +1,8 @@
 ---  
 layout: page  
-title: Say Hello  
-permalink: /contact/  
-tags: contact  
+title: Archive    
+permalink: /archive/  
+tags: archive  
 ---  
 
 Hello world.
