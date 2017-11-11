@@ -11,21 +11,21 @@ From entertaining B-movies to Hollywood summer blockbusters, I've always enjoyed
 
 I used Python's BeautifulSoup and Selenium libraries to scrape data about the movies Ebert reviewed and rated from his [website](https://www.rogerebert.com). Once the data was scraped and cleaned, I realized that there might not be enough features to create an accurate model. I wanted other ratings to compare his to, so I scraped user ratings from IMDb. I also downloaded a dataset of user ratings from another large movie rating site, MovieLens. IMDb scores were on a scale of 0.0 to 10.0 and MovieLens scores were on a scale of 0.0 to 5.0. The IMDb and MovieLens data was cleaned and merged with Ebert's data into one dataset of 4749 total ratings.
 
-![Final Dataset](https://zachheick.github.io/images/ebert_final_df.png){: .center-image }    
+![Final Dataset](https://zachheick.github.io/images/Project_Luther_images/ebert_final_df.png){: .center-image }    
 
 ## Exploratory Analysis and Feature Selection   
 
 I took a look at Roger Ebert's rating distribution first. Ebert rates movies on a scale of zero to four stars, incrementing by halves. Looking at the bar plot, he gave almost half of the movies a 3 to 3.5 rating. Ebert also does not give too many movies a terrible rating of 0 to 0.5 stars.  
 
-![Ebert Rating Distribution](https://zachheick.github.io/images/ebert_rating_distribution.png){: .center-image }  
+![Ebert Rating Distribution](https://zachheick.github.io/images/Project_Luther_images/ebert_rating_distribution.png){: .center-image }  
 
 When thinking about what features to include in the model, a good practice is to start with a single feature and build from there. Features that came to mind were the IMDb and MovieLens user ratings. I wanted to see if there was any correlation between Ebert's ratings and either of the user ratings from other sources. I plotted each feature separately, but did not see a good linear relationship. I had also tried to re-engineer the IMDb and MovieLens features, but could not get a better result.  
 
-![Single Feature Graphs](https://zachHeick.github.io/images/ebert_single_feature_graphs.png){: .center-image }  
+![Single Feature Graphs](https://zachHeick.github.io/images/Project_Luther_images/ebert_single_feature_graphs.png){: .center-image }  
 
 I took a look at the pair plot of the rest of the features to see if there was something I had missed, but once again did not notice any patterns, specifically in how the features were correlated with Ebert's `Star_Score`. The other ratings, however, do seem to have some correlation with each other.
 
-![Feature Pair Plot](https://zachheick.github.io/images/ebert_pair_plot.png){: .center-image }  
+![Feature Pair Plot](https://zachheick.github.io/images/Project_Luther_images/ebert_pair_plot.png){: .center-image }  
 
 Because of the difficulty finding correlations to Star_Score when looking at the pairplot, I looked at the correlation scores to get a better understanding.  
 
@@ -44,11 +44,11 @@ The features I start with were `MovieLens_Score` and `Imdb_Score`. I slowly adde
 
 The summary of my final model with 19 features that include `Runtime`, `MovieLens_Score`, `IMDb_Score`, and multiple genres and sub-genres:  
 
-![Model Summary](https://zachheick.github.io/images/ebert_model_summary.png){: .center-image }  
+![Model Summary](https://zachheick.github.io/images/Project_Luther_images/ebert_model_summary.png){: .center-image }  
 
 I couldn't just rely on the adjusted R-squared value for measuring the model. I also needed to look at the distribution of residuals to make sure the model was capturing all trends across the whole set of training data. A normal distribution of the model's residuals indicated this.  
 
-![Model Residuals Distribution](https://zachheick.github.io/images/ebert_residual_distribution.png){: .center-image }  
+![Model Residuals Distribution](https://zachheick.github.io/images/Project_Luther_images/ebert_residual_distribution.png){: .center-image }  
 
 Another check to see if the model was performing consistently across the whole set of data was using cross validation.  
 
@@ -69,8 +69,7 @@ np.sqrt(out_scores.mean())
 
 I got a slightly higher root mean squared error on the out-of-sample data than the in-sample data. This meant that the model generalized the data well. I test my model on the test set and get a final root mean squared error of 0.73, meaning the model's predictions were off by slightly more than a half star rating. I plotted the actual Ebert ratings vs the model's predicted ratings.  
 
-![Model Predicted Ratings](https://zachheick.github.io/images/ebert_model_predictions.png){: .center-image }  
-
+![Model Predicted Ratings](https://zachheick.github.io/images/Project_Luther_images/ebert_model_predictions.png){: .center-image }  
 Looking at the model visualization, this model loses some accuracy as Ebert's rating decreases. Even at the higher ratings, the model did not perform terribly, but there's definately room for improvement.
 
 ## Predict Recent Movies  
