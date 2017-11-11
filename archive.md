@@ -5,7 +5,9 @@ title: Archive
 tags: archive  
 ---  
 
-#### October 2017  
+You can access all of my blog posts below.  
+
+### October 2017  
 
 Introduction to Graph Databases with Neo4j  
 
@@ -15,7 +17,9 @@ Introduction to Graph Databases with Neo4j
 
 [Writing Faster Code with Cython](https://zachheick.github.io/2017/10/05/Writing-Faster-Code-with-Cython/)  
 
-#### September 2017  
+
+
+### September 2017  
 
 [MTA Data Analysis](https://zachheick.github.io/2017/09/25/MTA-Data-Analysis/)
 
