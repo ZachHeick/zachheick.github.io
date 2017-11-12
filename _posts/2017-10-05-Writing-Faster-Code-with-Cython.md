@@ -7,9 +7,11 @@ Choosing a programming language when wanting to learn how to code can be overwhe
 
 ![Programming Languages](https://zachheick.github.io/images/programming_languages.jpg){: .center-image }  
 
-Like tools in a toolbox, certain languages are better suited for certain jobs. Many people (myself included) start with Python. It's straight forward syntax is easy to learn and read, and Python also encourages good programming habits through its focus on white space and indentation. The list goes on about what Python is great at, but like any programming language, it has tradeoffs. Specifically, Python is very slow when it comes to large calculations whereas languages like C and C++ are much faster. Cython helps Python overcome this problem. 
+Like tools in a toolbox, certain languages are better suited for certain jobs. Many people (myself included) start with Python. Its straight forward syntax is easy to learn and read, and Python also encourages good programming habits through its focus on white space and indentation. The list goes on about what Python is great at, but like any programming language, it has trade-offs. Specifically, Python is very slow when it comes to large calculations whereas languages like C and C++ are much faster. Cython helps Python overcome this problem. 
 
 **Cython** is a static compiler and superset of the Python language that makes Python code able to be compiled using C/C++ compilers.  
+
+I'll give a quick example on how to use Cython and explain what's going on under the hood.  
 
 ## The Rectangle Method  
 
@@ -51,6 +53,8 @@ integrate_f(0, 100, 50000000)
 Running this code in pure Python takes a very long time. Because Python is not statically typed, the code needs to be interpreted before being turned into instructions that the computer can understand. CPython, the default interpreter from Python.org, does exactly this. CPython turns the code that we wrote into bytecode that is saved in a .pyc file. Once our source code is converted to bytecode, a virtual machine reads each instruction in the bytecode and executes whatever operation is indicated. A *virtual* *machine* is software that interprets bytecode.  
 
 #### Pure Python with Cython  
+
+We load Cython by calling `%load_ext cython`. To compile our code with Cython, all we have to include is `%%cython` in our code.  
 
 ```python
 %load_ext cython 
