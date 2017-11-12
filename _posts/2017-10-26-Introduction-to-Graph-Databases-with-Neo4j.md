@@ -9,4 +9,10 @@ Relational database management systems (RDBMS) have been the go-to data storage 
 
 ## Relational vs. Graph  
 
+## Setting Up Neo4j Locally  
+
+## Load and Extract Data with Python  
+
+## Other Resources  
+
 
