@@ -27,7 +27,7 @@ Neo4j has created an easy-to-install desktop application for managing your local
   2. Once you're in, create a new project and select "new database" and then "local". Give it a name and description and hit "create".  
   3. Start the database and open the URL [http://localhost:7474](http://localhost:7474) to begin working with Neo4j!   
 
-Now that the database is up and running, we can now insert and extract data using Neo4j's query langauge, [Cypher](https://neo4j.com/developer/cypher-query-language/). Before moving onto the example, type `:play start` into the desktop editor. Here you can find built-in tutorials that cover the editor, the Cypher language, and playing around with a built-in movie dataset.    
+Now that the database is up and running, we can now insert and extract data using Neo4j's query langauge, [Cypher](https://neo4j.com/developer/cypher-query-language/). Before moving onto the example, type `:play start` into the desktop editor. Here you can find tutorials that cover the editor, the Cypher language, and playing around with a built-in movie dataset.    
 
 ## Insert and Extract Data with Python  
 
@@ -195,6 +195,10 @@ CREATE CONSTRAINT ON (o:Order) ASSERT o.orderID IS UNIQUE;
 
 session.run(query)
 ```  
+
+A snapshot of the final graph looks something like this:  
+
+![final graph](https://zachheick.github.io/images/final_graph.png){: .center-image }  
 
 ## Other Resources  
 
