@@ -200,6 +200,15 @@ A snapshot of the final graph looks something like this:
 
 ![final graph](https://zachheick.github.io/images/final_graph.png){: .center-image }  
 
-## Other Resources  
+#### Which Employee had the Highest Cross-Selling Count of "Tofu" and Which Product?  
+
+```sql  
+MATCH (choc:Product {productName:'Tofu'})<-[:PRODUCT]-(:Order)<-[:SOLD]-(employee),
+      (employee)-[:SOLD]->(o2)-[:PRODUCT]->(other:Product)
+RETURN employee.employeeID, other.productName, count(distinct o2) as count
+ORDER BY count DESC
+```  
+
+[Neo4j](https://neo4j.com/) has tons of in-depth and advanced resources covering graph databases. Thanks for reading! 
 
 
