@@ -15,8 +15,6 @@ Relational databases do a great job of storing data into easy-to-undersetand str
 
 ![relational model](https://zachheick.github.io/images/relational_model.png){: /center-image }  
 
-![graph model](https://zachheick.github.io/images/graph_model.png){: /center-image }  
-
 Creating a graph of nodes and relationships makes it easy to pick a starting point within the graph and explore neighbors by traversing over these relationships. This results in much faster query times compared to calling a bunch of "joins" in a relational database and searching through every row. The query times of the graph network is still very fast as it scales and becomes more complicated.   
 
 ## Setting Up Neo4j Locally  
