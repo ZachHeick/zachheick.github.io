@@ -33,8 +33,6 @@ Now that the database is up and running, we can now insert and extract data usin
 
 The "hello world" of database systems is the [Northwind database](https://northwinddatabase.codeplex.com/). We'll use Python and the CSV files from this database and transform it from tables and rows into a graph within our local Neo4j database. In order to connect to our local Neo4j database, install the Python driver with the command `pip install neo4j-driver`.  
 
-#### Connect to the Database  
-
 Create a new Python file and import the driver. Then, create a driver and a new session.  
 
 ```python
@@ -104,6 +102,45 @@ MERGE (order:Order {{orderID: row.orderID}}) ON CREATE SET order.shipName =  row
 
 session.run(query)
 ```  
+
+Next, create relationships of orders to products and employees.  
+
+```python  
+query = """
+USING PERIODIC COMMIT
+LOAD CSV WITH HEADERS FROM "{0}" AS row
+MATCH (order:Order {{orderID: row.orderID}})
+MATCH (product:Product {{productID: row.productID}})
+MERGE (order)-[pu:PRODUCT]->(product)
+ON CREATE SET pu.unitPrice = toFloat(row.unitPrice), pu.quantity = toFloat(row.quantity);
+""".format(order_details_csv)
+
+session.run(query)
+``` 
+
+```python  
+query = """
+USING PERIODIC COMMIT
+LOAD CSV WITH HEADERS FROM "{0}" AS row
+MATCH (order:Order {{orderID: row.orderID}})
+MATCH (employee:Employee {{employeeID: row.employeeID}})
+MERGE (employee)-[:SOLD]->(order);
+""".format(orders_csv)
+
+session.run(query)
+```  
+
+```python  
+query = """
+LOAD CSV WITH HEADERS FROM "{0}" AS row
+MATCH (order:Order {{orderID: row.orderID}})
+MATCH (customer:Customer {{customerID: row.customerID}})
+MERGE (customer)-[:PURCHASED]->(order);
+""".format(orders_csv)
+
+session.run(query)
+```  
+
 
 
 ## Other Resources  
