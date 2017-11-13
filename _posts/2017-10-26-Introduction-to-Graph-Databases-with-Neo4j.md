@@ -11,9 +11,9 @@ Relational database management systems (RDBMS) have been the go-to data storage 
 
 Relational databases do a great job of storing data into easy-to-undersetand structured tables. But what if I'm interested in the connections between data tables? I could call a complex query containing some "joins", but as data scales this could get very computationally expensive. Also, what if I know the data I'm dealing with won't always be consistent? NoSQL databases are an option, but these database systems store sets of data that are disconnected entirely. 
 
-**Neo4j** is a graph database management system that can handle both structured and unstructured data while storing the connections between data as well. Instead of storing data within <span class="green">tables and rows</span>, Neo4j represents a row as a <span class="green">node object</span>, where the node type would represent a table. These nodes are then connected by objects called <span class="blue">relationships</span>. Nodes and relationships can also have attributes, which are similar to column values in a table. 
+![relational model](https://zachheick.github.io/images/relational_model.png){: .center-image}  
 
-![relational model](https://zachheick.github.io/images/relational_model.png){: .center-image} 
+**Neo4j** is a graph database management system that can handle both structured and unstructured data while storing the connections between data as well. Instead of storing data within <span class="green">tables and rows</span>, Neo4j represents a row as a <span class="green">node object</span>, where the node type would represent a table. These nodes are then connected by objects called <span class="blue">relationships</span>. Nodes and relationships can also have attributes, which are similar to column values in a table. 
 
 ![graph model](https://zachheick.github.io/images/graph_model.png){: .center-image}  
 
@@ -22,6 +22,8 @@ Creating a graph of nodes and relationships makes it easy to pick a starting poi
 ## Setting Up Neo4j Locally  
 
 ## Load and Extract Data with Python  
+
+![northwind db](https://zachheick.github.io/images/northwind_db.png){: .center-image}  
 
 ## Other Resources  
 
