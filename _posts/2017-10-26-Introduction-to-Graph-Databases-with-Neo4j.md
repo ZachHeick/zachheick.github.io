@@ -31,7 +31,9 @@ Now that the database is up and running, we can now insert and extract data usin
 
 ## Insert and Extract Data with Python  
 
-The "hello world" of database systems is the [Northwind database](https://northwinddatabase.codeplex.com/). We can easily create our graph network with Python and the CSV files from this database. In order to use Python to connect to our local Neo4j database, install the driver with the command `pip install neo4j-driver`.  
+The "hello world" of database systems is the [Northwind database](https://northwinddatabase.codeplex.com/). We'll use Python and the CSV files from this database and transform it from tables and rows into a graph within our local Neo4j database. In order to connect to our local Neo4j database, install the Python driver with the command `pip install neo4j-driver`.  
+
+#### Connect to the Database  
 
 Create a new Python file and import the driver. Then, create a driver and a new session.  
 
@@ -39,8 +41,69 @@ Create a new Python file and import the driver. Then, create a driver and a new 
 from neo4j.v1 import GraphDatabase, basic_auth
 driver = GraphDatabase.driver('bolt://localhost:7687', auth=basic_auth('neo4j', 'neo4j'))
 session = driver.session()  
-```
+```  
 
+Using the CSV files, create the customer, product, supplier, employee, category, and order nodes first.  
+
+```python  
+query = """
+USING PERIODIC COMMIT
+LOAD CSV WITH HEADERS FROM "{0}" AS row
+CREATE (:Customer {{companyName: row.companyName, customerID: row.customerID, fax: row.fax, phone: row.phone}})
+""".format(customers_csv)
+
+session.run(query)
+```  
+
+```python  
+query = """
+USING PERIODIC COMMIT
+LOAD CSV WITH HEADERS FROM "{0}" AS row
+CREATE (:Product {{productName: row.productName, productID: row.productID, unitPrice: toFloat(row.unitPrice)}});
+""".format(products_csv)
+
+session.run(query)
+```  
+
+```python  
+query = """
+USING PERIODIC COMMIT
+LOAD CSV WITH HEADERS FROM "{0}" AS row
+CREATE (:Supplier {{companyName: row.companyName, supplierID: row.supplierID}});
+""".format(suppliers_csv)
+
+session.run(query)
+```  
+
+```python  
+uery = """
+USING PERIODIC COMMIT
+LOAD CSV WITH HEADERS FROM "{0}" AS row
+CREATE (:Employee {{employeeID:row.employeeID,  firstName: row.firstName, lastName: row.lastName, title: row.itle}});
+""".format(employees_csv)
+
+session.run(query)
+```  
+
+```python  
+query = """
+USING PERIODIC COMMIT
+LOAD CSV WITH HEADERS FROM "{0}" AS row
+CREATE (:Category {{categoryID: row.categoryID, categoryName: row.categoryName, description: row.description}});
+""".format(categories_csv)
+
+session.run(query)
+```  
+
+```python  
+query = """
+USING PERIODIC COMMIT
+LOAD CSV WITH HEADERS FROM "{0}" AS row
+MERGE (order:Order {{orderID: row.orderID}}) ON CREATE SET order.shipName =  row.shipName;
+""".format(orders_csv)
+
+session.run(query)
+```  
 
 
 ## Other Resources  
