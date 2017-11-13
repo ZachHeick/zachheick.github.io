@@ -210,27 +210,16 @@ ORDER BY count DESC
 LIMIT 10;
 ```  
 
-"employee.employeeID"│"other.productName"         │"count"│
-╞═════════════════════╪════════════════════════════╪═══════╡
-│"4"                  │"Gnocchi di nonna Alice"    │14     │
-├─────────────────────┼────────────────────────────┼───────┤
-│"4"                  │"Pâté chinois"              │12     │
-├─────────────────────┼────────────────────────────┼───────┤
-│"3"                  │"Gumbär Gummibärchen"       │12     │
-├─────────────────────┼────────────────────────────┼───────┤
-│"1"                  │"Flotemysost"               │12     │
-├─────────────────────┼────────────────────────────┼───────┤
-│"4"                  │"Teatime Chocolate Biscuits"│11     │
-├─────────────────────┼────────────────────────────┼───────┤
-│"1"                  │"Camembert Pierrot"         │11     │
-├─────────────────────┼────────────────────────────┼───────┤
-│"1"                  │"Gorgonzola Telino"         │11     │
-├─────────────────────┼────────────────────────────┼───────┤
-│"4"                  │"Boston Crab Meat"          │11     │
-├─────────────────────┼────────────────────────────┼───────┤
-│"1"                  │"Pavlova"                   │11     │
-├─────────────────────┼────────────────────────────┼───────┤
-│"4"                  │"Camembert Pierrot"         │11     │
+![query results](https://zachheick.github.io/images/query1_results.png){: .center-image }  
+
+#### Who Reports to Whom?  
+
+```sql  
+MATCH path = (e:Employee)<-[:REPORTS_TO]-(sub)
+RETURN e.employeeID AS manager, sub.employeeID AS employee;
+```  
+
+![query results](https://zachheick.github.io/images/query2_results.png){: .center-image }   
 
 [Neo4j](https://neo4j.com/) has tons of in-depth and advanced resources covering graph databases. Thanks for reading! 
 
