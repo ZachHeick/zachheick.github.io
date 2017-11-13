@@ -13,7 +13,7 @@ Relational databases do a great job of storing data into easy-to-undersetand str
 
 ![relational model](https://zachheick.github.io/images/relational_model.png){: .center-image}  
 
-**Neo4j** is a graph database management system that can handle both structured and unstructured data while storing the connections between data as well. Instead of storing data within <span class="green">tables and rows</span>, Neo4j represents a row as a <span class="green">node object</span>, where the node type would represent a table. These nodes are then connected by objects called <span class="blue">relationships</span>. Nodes and relationships can also have attributes, which are similar to column values in a table. 
+**Neo4j** is a graph database management system that can handle both structured and unstructured data while storing the connections between data as well. Instead of storing data within <span class="green">tables and rows</span>, Neo4j represents a row as a <span class="green">node object</span>, where the node label would represent a table. These nodes are then connected by objects called <span class="blue">relationships</span>. Nodes and relationships can also have attributes, which are similar to column values in a table. 
 
 ![graph model](https://zachheick.github.io/images/graph_model.png){: .center-image}  
 
@@ -21,9 +21,15 @@ Creating a graph of nodes and relationships makes it easy to pick a starting poi
 
 ## Setting Up Neo4j Locally  
 
-## Load and Extract Data with Python  
+Neo4j has created an easy-to-install desktop application for managing your databases.  
 
-![northwind db](https://zachheick.github.io/images/northwind_db.png){: .center-image}  
+  1. [Download](https://neo4j.com/download/) Neo4j and start the desktop application.  
+  2. Once you're in, create a new project and select "new database" and then "local". Give it a name and description and hit "create".  
+  3. Start the database and open the URL [http://localhost:7474](http://localhost:7474) to begin working with Neo4j!  
+
+Now that the database is up and running, we can now insert and extract data using Neo4j's query langauge, Cypher.  
+
+## Insert and Extract Data with Python  
 
 ## Other Resources  
 
