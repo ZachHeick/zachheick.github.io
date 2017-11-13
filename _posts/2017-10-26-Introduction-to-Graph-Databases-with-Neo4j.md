@@ -207,7 +207,30 @@ MATCH (choc:Product {productName:'Tofu'})<-[:PRODUCT]-(:Order)<-[:SOLD]-(employe
       (employee)-[:SOLD]->(o2)-[:PRODUCT]->(other:Product)
 RETURN employee.employeeID, other.productName, count(distinct o2) as count
 ORDER BY count DESC
+LIMIT 10;
 ```  
+
+"employee.employeeID"│"other.productName"         │"count"│
+╞═════════════════════╪════════════════════════════╪═══════╡
+│"4"                  │"Gnocchi di nonna Alice"    │14     │
+├─────────────────────┼────────────────────────────┼───────┤
+│"4"                  │"Pâté chinois"              │12     │
+├─────────────────────┼────────────────────────────┼───────┤
+│"3"                  │"Gumbär Gummibärchen"       │12     │
+├─────────────────────┼────────────────────────────┼───────┤
+│"1"                  │"Flotemysost"               │12     │
+├─────────────────────┼────────────────────────────┼───────┤
+│"4"                  │"Teatime Chocolate Biscuits"│11     │
+├─────────────────────┼────────────────────────────┼───────┤
+│"1"                  │"Camembert Pierrot"         │11     │
+├─────────────────────┼────────────────────────────┼───────┤
+│"1"                  │"Gorgonzola Telino"         │11     │
+├─────────────────────┼────────────────────────────┼───────┤
+│"4"                  │"Boston Crab Meat"          │11     │
+├─────────────────────┼────────────────────────────┼───────┤
+│"1"                  │"Pavlova"                   │11     │
+├─────────────────────┼────────────────────────────┼───────┤
+│"4"                  │"Camembert Pierrot"         │11     │
 
 [Neo4j](https://neo4j.com/) has tons of in-depth and advanced resources covering graph databases. Thanks for reading! 
 
