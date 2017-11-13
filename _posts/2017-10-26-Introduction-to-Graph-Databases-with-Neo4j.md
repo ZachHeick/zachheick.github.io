@@ -221,7 +221,7 @@ RETURN e.employeeID AS manager, sub.employeeID AS employee;
 
 ![query results](https://zachheick.github.io/images/query2_results.png){: .center-image }   
 
-[Neo4j](https://neo4j.com/) has tons of in-depth and advanced resources covering graph databases.  
+For more in-depth guides, [Neo4j](https://neo4j.com/) has plenty of more advanced resources covering graph databases.  
 
 Thanks for reading! 
 
