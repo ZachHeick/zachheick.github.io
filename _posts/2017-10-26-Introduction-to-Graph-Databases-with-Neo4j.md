@@ -31,6 +31,18 @@ Now that the database is up and running, we can now insert and extract data usin
 
 ## Insert and Extract Data with Python  
 
+The "hello world" of database systems is the [Northwind database](https://northwinddatabase.codeplex.com/). We can easily create our graph network with Python and the CSV files from this database. In order to use Python to connect to our local Neo4j database, install the driver with the command `pip install neo4j-driver`.  
+
+Create a new Python file and import the driver. Then, create a driver and a new session.  
+
+```python
+from neo4j.v1 import GraphDatabase, basic_auth
+driver = GraphDatabase.driver('bolt://localhost:7687', auth=basic_auth('neo4j', 'neo4j'))
+session = driver.session()  
+```
+
+
+
 ## Other Resources  
 
 
