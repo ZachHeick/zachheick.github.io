@@ -27,7 +27,7 @@ Neo4j has created an easy-to-install desktop application for managing your local
   2. Once you're in, create a new project and select "new database" and then "local". Give it a name and description and hit "create".  
   3. Start the database and open the URL [http://localhost:7474](http://localhost:7474) to begin working with Neo4j!   
 
-Now that the database is up and running, we can now insert and extract data using Neo4j's query langauge, [Cypher](https://neo4j.com/developer/cypher-query-language/).  
+Now that the database is up and running, we can now insert and extract data using Neo4j's query langauge, [Cypher](https://neo4j.com/developer/cypher-query-language/). Before moving onto the example, type `:play start` into the desktop editor. Here you can find built-in tutorials that cover the editor, the Cypher language, and playing around with a built-in movie dataset.    
 
 ## Insert and Extract Data with Python  
 
@@ -141,7 +141,60 @@ MERGE (customer)-[:PURCHASED]->(order);
 session.run(query)
 ```  
 
+Then, create relationships between products, suppliers, and categories.  
 
+```python  
+query = """
+USING PERIODIC COMMIT
+LOAD CSV WITH HEADERS FROM "{0}" AS row
+MATCH (product:Product {{productID: row.productID}})
+MATCH (supplier:Supplier {{supplierID: row.supplierID}})
+MERGE (supplier)-[:SUPPLIES]->(product);
+""".format(products_csv)
+
+session.run(query)
+```  
+
+```python  
+query = """
+USING PERIODIC COMMIT
+LOAD CSV WITH HEADERS FROM "{0}" AS row
+MATCH (product:Product {{productID: row.productID}})
+MATCH (category:Category {{categoryID: row.categoryID}})
+MERGE (product)-[:PART_OF]->(category);
+""".format(products_csv)
+
+session.run(query)
+```  
+
+Finally, create a relationship between employees and set our own indexes on each node.  
+
+```python  
+query = """
+USING PERIODIC COMMIT
+LOAD CSV WITH HEADERS FROM "{0}" AS row
+MATCH (employee:Employee {{employeeID: row.employeeID}})
+MATCH (manager:Employee {{employeeID: row.reportsTo}})
+MERGE (employee)-[:REPORTS_TO]->(manager);
+""".format(employees_csv)
+
+session.run(query)
+```  
+
+```python  
+query = """
+CREATE INDEX ON :Product(productID);
+CREATE INDEX ON :Product(productName);
+CREATE INDEX ON :Category(categoryID);
+CREATE INDEX ON :Employee(employeeID);
+CREATE INDEX ON :Supplier(supplierID);
+CREATE INDEX ON :Customer(customerID);
+CREATE INDEX ON :Customer(customerName);
+CREATE CONSTRAINT ON (o:Order) ASSERT o.orderID IS UNIQUE;
+"""
+
+session.run(query)
+```  
 
 ## Other Resources  
 
