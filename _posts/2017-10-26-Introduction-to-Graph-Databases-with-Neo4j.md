@@ -9,7 +9,9 @@ Relational database management systems (RDBMS) have been the go-to data storage 
 
 ## Relational vs. Graph  
 
+Relational databases do a great job of storing data into easy-to-undersetand structured tables. But what if I'm interested in the connections between data tables? I could call a complex query containing some "joins", but as data scales this could get very computationally expensive. Also, what if I know the data I'm dealing with won't always be consistent? NoSQL databases are an option, but these database systems store sets of data that are disconnected entirely. 
 
+**Neo4j** is a graph database management system that can handle both structured and unstructured data while storing the connections between data as well. Instead of storing data within tables and rows, each row is represented as a node object, where the type of node would represent a table. These nodes are then connected by objects called relationships. Structuring the data as nodes and relationships makes it easy to pick a starting point within the graph and explore neighbors by traversing over these relationships, resulting in much faster query times than calling a bunch of "joins" in a relational database. The query times of the graph network is still very fast as it scales and becomes more complicated.   
 
 ## Setting Up Neo4j Locally  
 

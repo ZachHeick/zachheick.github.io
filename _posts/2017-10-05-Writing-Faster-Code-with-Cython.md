@@ -54,7 +54,7 @@ Running this code in pure Python takes a very long time. Because Python is not s
 
 #### Pure Python with Cython  
 
-We load Cython by calling `%load_ext cython`. To compile our code with Cython, all we have to include is `%%cython` in our code.  
+We load Cython by calling `%load_ext cython`. To compile with Cython, all we have to include is `%%cython` in our code.  
 
 ```python
 %load_ext cython 
