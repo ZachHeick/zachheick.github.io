@@ -1,10 +1,5 @@
-.social-icons-left {
+.social-icons-left, .social-icons-right {
   text-align: center;
-  float: none;
-}
-
-.social-icons-right {
-  text-align: left;
   float: none;
 }
 
@@ -16,7 +11,7 @@
 
 .social-icons a.fa {
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 1;
   padding: 0.2em;
   font-size: 1.2rem;
 }
