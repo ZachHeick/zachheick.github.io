@@ -9,9 +9,9 @@ Relational database management systems (RDBMS) have been the go-to data storage 
 
 ## Relational vs. Graph  
 
-![relational model](https://zachheick.github.io/images/relational_model.png){: .center-image}
-
 Relational databases do a great job of storing data into easy-to-undersetand structured tables. But what if I'm interested in the connections between data tables? I could call a complex query containing some "joins", but as data scales this could get very computationally expensive. Also, what if I know the data I'm dealing with won't always be consistent? NoSQL databases are an option, but these database systems store sets of data that are disconnected entirely. 
+
+![relational model](https://zachheick.github.io/images/relational_model.png){: .center-image}
 
 ![graph model](https://zachheick.github.io/images/graph_model.png){: .center-image}
 
