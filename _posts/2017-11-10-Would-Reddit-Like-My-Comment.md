@@ -7,7 +7,7 @@ In today's age of information, social media platforms have become the most popul
 
 ## How Commenting on Reddit Works  
 
-When a user makes a comment on a submission, they are given an intial score of 1. From there, other users can either <span style="color:#ff8b60">upvote (+1)</span> or <span style="color:#9494ff>downvote (-1)</span> the comment score. The intention of this scoring system was that users would upvote comments they found funny or the comment was relevant and contributed well to discussion, while downvoting comments that were racist, sexist, or just not nice in general. Reddit sorts comment scores from greatest to least by default on all submissions, and the idea was that this upvote-downvote system would help hide nasty internet comments from discussion and promote positive comments. It does in fact do a really good job at this.  
+When a user makes a comment on a submission, they are given an intial score of 1. From there, other users can either <span style="color:#ff8b60">upvote (+1)</span> or <span style="color:#9494ff">downvote (-1)</span> the comment score. The intention of this scoring system was that users would upvote comments they found funny or the comment was relevant and contributed well to discussion, while downvoting comments that were racist, sexist, or just not nice in general. Reddit sorts comment scores from greatest to least by default on all submissions, and the idea was that this upvote-downvote system would help hide nasty internet comments from discussion and promote positive comments. It does in fact do a really good job at this.  
 
 ## The Problem with the Comment Scoring System  
 
