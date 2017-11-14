@@ -57,7 +57,7 @@ session.run(query)
 query = """
 USING PERIODIC COMMIT
 LOAD CSV WITH HEADERS FROM "{0}" AS row
-CREATE (:Product {{productName: row.productName, productID: row.productID, unitPrice: toFloat(row.unitPrice)}});
+CREATE (:Product {productName: row.productName, productID: row.productID, unitPrice: toFloat(row.unitPrice)});
 """.format(products_csv)
 
 session.run(query)
@@ -67,7 +67,7 @@ session.run(query)
 query = """
 USING PERIODIC COMMIT
 LOAD CSV WITH HEADERS FROM "{0}" AS row
-CREATE (:Supplier {{companyName: row.companyName, supplierID: row.supplierID}});
+CREATE (:Supplier {companyName: row.companyName, supplierID: row.supplierID});
 """.format(suppliers_csv)
 
 session.run(query)
@@ -77,7 +77,7 @@ session.run(query)
 uery = """
 USING PERIODIC COMMIT
 LOAD CSV WITH HEADERS FROM "{0}" AS row
-CREATE (:Employee {{employeeID:row.employeeID,  firstName: row.firstName, lastName: row.lastName, title: row.itle}});
+CREATE (:Employee {employeeID:row.employeeID,  firstName: row.firstName, lastName: row.lastName, title: row.itle});
 """.format(employees_csv)
 
 session.run(query)
@@ -87,7 +87,7 @@ session.run(query)
 query = """
 USING PERIODIC COMMIT
 LOAD CSV WITH HEADERS FROM "{0}" AS row
-CREATE (:Category {{categoryID: row.categoryID, categoryName: row.categoryName, description: row.description}});
+CREATE (:Category {categoryID: row.categoryID, categoryName: row.categoryName, description: row.description});
 """.format(categories_csv)
 
 session.run(query)
@@ -97,7 +97,7 @@ session.run(query)
 query = """
 USING PERIODIC COMMIT
 LOAD CSV WITH HEADERS FROM "{0}" AS row
-MERGE (order:Order {{orderID: row.orderID}}) ON CREATE SET order.shipName =  row.shipName;
+MERGE (order:Order {orderID: row.orderID}) ON CREATE SET order.shipName =  row.shipName;
 """.format(orders_csv)
 
 session.run(query)
@@ -109,8 +109,8 @@ Next, create relationships of orders to products and employees.
 query = """
 USING PERIODIC COMMIT
 LOAD CSV WITH HEADERS FROM "{0}" AS row
-MATCH (order:Order {{orderID: row.orderID}})
-MATCH (product:Product {{productID: row.productID}})
+MATCH (order:Order {orderID: row.orderID})
+MATCH (product:Product {productID: row.productID})
 MERGE (order)-[pu:PRODUCT]->(product)
 ON CREATE SET pu.unitPrice = toFloat(row.unitPrice), pu.quantity = toFloat(row.quantity);
 """.format(order_details_csv)
@@ -122,8 +122,8 @@ session.run(query)
 query = """
 USING PERIODIC COMMIT
 LOAD CSV WITH HEADERS FROM "{0}" AS row
-MATCH (order:Order {{orderID: row.orderID}})
-MATCH (employee:Employee {{employeeID: row.employeeID}})
+MATCH (order:Order {orderID: row.orderID})
+MATCH (employee:Employee {employeeID: row.employeeID})
 MERGE (employee)-[:SOLD]->(order);
 """.format(orders_csv)
 
@@ -133,8 +133,8 @@ session.run(query)
 ```python  
 query = """
 LOAD CSV WITH HEADERS FROM "{0}" AS row
-MATCH (order:Order {{orderID: row.orderID}})
-MATCH (customer:Customer {{customerID: row.customerID}})
+MATCH (order:Order {orderID: row.orderID})
+MATCH (customer:Customer {customerID: row.customerID})
 MERGE (customer)-[:PURCHASED]->(order);
 """.format(orders_csv)
 
@@ -147,8 +147,8 @@ Then, create relationships between products, suppliers, and categories.
 query = """
 USING PERIODIC COMMIT
 LOAD CSV WITH HEADERS FROM "{0}" AS row
-MATCH (product:Product {{productID: row.productID}})
-MATCH (supplier:Supplier {{supplierID: row.supplierID}})
+MATCH (product:Product {productID: row.productID})
+MATCH (supplier:Supplier {supplierID: row.supplierID})
 MERGE (supplier)-[:SUPPLIES]->(product);
 """.format(products_csv)
 
@@ -159,8 +159,8 @@ session.run(query)
 query = """
 USING PERIODIC COMMIT
 LOAD CSV WITH HEADERS FROM "{0}" AS row
-MATCH (product:Product {{productID: row.productID}})
-MATCH (category:Category {{categoryID: row.categoryID}})
+MATCH (product:Product {productID: row.productID})
+MATCH (category:Category {categoryID: row.categoryID})
 MERGE (product)-[:PART_OF]->(category);
 """.format(products_csv)
 
@@ -173,8 +173,8 @@ Finally, create a relationship between employees and set our own indexes on each
 query = """
 USING PERIODIC COMMIT
 LOAD CSV WITH HEADERS FROM "{0}" AS row
-MATCH (employee:Employee {{employeeID: row.employeeID}})
-MATCH (manager:Employee {{employeeID: row.reportsTo}})
+MATCH (employee:Employee {employeeID: row.employeeID})
+MATCH (manager:Employee {employeeID: row.reportsTo})
 MERGE (employee)-[:REPORTS_TO]->(manager);
 """.format(employees_csv)
 
