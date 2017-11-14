@@ -19,6 +19,8 @@ With this in mind, I wanted to see if I could predict how different subreddits v
 
 ## Modeling  
 
+![Recall Scores](https://zachheick.github.io/images/Project_Fletcher_images/score_vs_recall.png){: .center-image }
+
 ## Final Thoughts, What I Learned, and Future Work  
 
 ## Project Source  
