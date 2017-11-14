@@ -1,6 +1,6 @@
 ---  
 layout: page  
-title: Zach's Resume  
+title: Resume  
 permalink: /resume/  
 tags: resume  
 ---  
