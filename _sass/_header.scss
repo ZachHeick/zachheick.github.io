@@ -40,7 +40,14 @@
 .posts .post a:hover .post-summary {
   opacity: 1;
   color: #5DA8D2;
-  -webkit-transform: scale(1.2);
+}
+
+.posts .post a:hover .post-meta,
+.posts .post a:hover .post-title,
+.posts .post a:hover .post-summary {
+  opacity: 1;
+  color: #5DA8D2;
+  -webkit-transform: scale(1.05);
 }
 
 .site-header {
