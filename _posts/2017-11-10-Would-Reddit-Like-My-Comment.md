@@ -3,7 +3,7 @@ layout: post
 title: Would Reddit Like My Comment?  
 ---  
 
-In today's age of information, social media platforms have become the most popular medium for sharing ideas and expressing one's opinion. The fourth project at Metis focused on utilizing unsupervised and supervised learning techniques on datasets of our choice. One of my favorite social media platforms is <span class="upvote">Reddit</span>, and for this project I was specifically interested in looking at Reddit comments and their content.
+In today's age of information, social media platforms have become the most popular medium for sharing ideas and expressing one's opinion. The fourth project at Metis focused on utilizing unsupervised and supervised learning techniques on datasets of our choice. One of my favorite social media platforms is <span style="color:#ff8b60">Reddit</span>, and for this project I was specifically interested in looking at Reddit comments and their content.
 
 ## How Commenting on Reddit Works  
 
