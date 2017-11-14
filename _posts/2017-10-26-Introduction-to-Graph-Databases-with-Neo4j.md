@@ -47,7 +47,7 @@ Using the CSV files, create the customer, product, supplier, employee, category,
 query = """
 USING PERIODIC COMMIT
 LOAD CSV WITH HEADERS FROM "{0}" AS row
-CREATE (:Customer {{companyName: row.companyName, customerID: row.customerID, fax: row.fax, phone: row.phone}})
+CREATE (:Customer {{companyName: row.companyName, customerID: row.customerID, fax: row.fax, phone: row.phone}});
 """.format(customers_csv)
 
 session.run(query)
