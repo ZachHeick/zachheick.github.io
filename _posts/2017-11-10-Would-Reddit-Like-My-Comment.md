@@ -9,7 +9,7 @@ In today’s age of information, social media has become the most popular medium
 
 ![Colbert](https://zachheick.github.io/images/Project_Fletcher_images/colbert.png){: .center-image }  
 
-When a user makes a comment on a submission, they are given an intial score of 1. From there, other users can either <span style="color:#ff8b60">upvote (+1)</span> or <span style="color:#9494ff">downvote (-1)</span> the comment score. The intention of this scoring system was that users would upvote comments they found funny or the comment was relevant and contributed well to discussion, while downvoting comments that were racist, sexist, or just not nice in general. Reddit sorts comment scores from greatest to least by default on all submissions, and the idea was that this upvote-downvote system would help hide nasty internet comments from discussion and promote positive comments. It does in fact do a really good job at this.  
+When a user makes a comment on a submission, the comment is given an intial score of 1. From there, other users can either <span style="color:#ff8b60">upvote (+1)</span> or <span style="color:#9494ff">downvote (-1)</span> the comment score. The intention of this scoring system was that users would upvote comments they found funny or the comment was relevant and contributed well to discussion, while downvote comments that were racist, sexist, or just not nice in general. Reddit sorts comment scores from greatest to least by default on all submissions, and the idea was that this upvote-downvote system would help hide nasty internet comments from discussion. It does in fact do a really good job at this.  
 
 ## The Problem with the Comment Scoring System  
 
@@ -31,17 +31,21 @@ I used PRAW (Python Reddit API Wrapper) to collect about 200,000 total comments 
    * /r/science
    * /r/worldnews
 
-Comments from each subreddit were stored into their own collection in a MongoDB database hosted by AWS. Before the comments could be vectorized for modeling, they needed to be cleaned. Raw Reddit comments are very similar to [markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/), so cleaning involved removing extra symbols, punctuation, emojis, and hyperlinks. Many Reddit comments also reference either the submission article or quote another user. The Reddit comment notation was very inconsistent when it came to making these references within comments, so these comments ended up getting tossed out.  
+Comments from each subreddit were stored into their own collection in a MongoDB database hosted by AWS. Before the comments could be vectorized for modeling, they needed to be cleaned. Raw Reddit comments are very similar to [markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/), so cleaning involved removing extra symbols, punctuation, emojis, and hyperlinks. Stop words, such as *the*, *is*, *a*, and *on* are removed as well. Many Reddit comments also reference either the submission article or quote another user. The Reddit comment notation was very inconsistent when it came to making these references within comments, so these comments ended up getting tossed out.    
+
+Comments are going to use different forms of a word, such as *swim*, *swims*, and *swimming*. Also, slightly different words belong to families of similar meaning, like *democracy*, *democratic*, and *democratization*.  
 
 ![Lemmatization Example](https://zachheick.github.io/images/Project_Fletcher_images/lemma_example.png){: .center-image }  
 
-## Other Features  
+The best way to handle this is a technique called **lemmatization**, the process of grouping together the inflected forms of a word so they can be analysed as a single base item. After the cleaned comments were lemmatized, they could now be vectorized. I used **tf-idf (term frequency–inverse document frequency)** to create the final matrix of feature vectors.  
 
-## Flask App  
+## Other Features  
 
 ## Modeling  
 
 ![Recall Scores](https://zachheick.github.io/images/Project_Fletcher_images/score_vs_recall.png){: .center-image }
+
+## Flask App  
 
 ## Final Thoughts, What I Learned, and Future Work  
 
