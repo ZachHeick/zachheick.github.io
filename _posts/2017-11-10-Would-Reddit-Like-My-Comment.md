@@ -9,7 +9,9 @@ In today’s age of information, social media has become the most popular medium
 
 ![Colbert](https://zachheick.github.io/images/Project_Fletcher_images/colbert.png){: .center-image }  
 
-Reddit is an aggregation of **subreddits**, which are similar to discussion boards or forums focused on a certain topic. When a user makes a comment on a subreddit submission, the comment is given an intial score of 1. From there, other users can either <span style="color:#ff8b60">upvote (+1)</span> or <span style="color:#9494ff">downvote (-1)</span> the comment score. The intention of this scoring system was that users would upvote comments they found funny or the comment was relevant and contributed well to discussion, while downvote comments that were racist, sexist, or just not nice in general. Reddit sorts comment scores from greatest to least by default on all submissions, and the idea was that this upvote-downvote system would help hide nasty internet comments from discussion. It does in fact do a really good job at this.  
+Reddit is an aggregation of **subreddits**, which are similar to discussion boards or forums focused on a certain topic. When a user makes a comment on a subreddit submission, the comment is given an intial score of 1. From there, other users can either <span style="color:#ff8b60">upvote (+1)</span> or <span style="color:#9494ff">downvote (-1)</span> the comment score.  
+
+The intention of this scoring system was that users would upvote comments they found funny or the comment was relevant and contributed well to discussion, while downvote comments that were racist, sexist, or just not nice in general. Reddit sorts comment scores from greatest to least by default on all submissions, and the idea was that this upvote-downvote system would help hide nasty internet comments from discussion. It does in fact do a really good job at this.  
 
 ## The Problem with the Comment Scoring System  
 
@@ -55,7 +57,7 @@ I really enjoyed working with some NLP techniques, and seeing how words and lang
 
 One idea for improving recall score would be to analyze and include the title of the submission or article that comments were discussing. For this project I generalized comments with subreddit, and adding in the title of posts could have made a positive difference. Comments on Reddit could have replies to them, and those replies could also have replies, and so on and so forth. In this project I only collected comments that were *not* replies, just general comments. Including comment replies might also help improve recall score.  
 
-There is definitely room for improvements in the cleaning and sentiment analysis parts of the project. Reddit and social media comments are filled with all sorts of slang, abbreviations, and weird punctuation. Focusing more on cleaning comments and using a different sentiment analysis library could to handle these comments better. Anomaly detection would also be appropriate for this project, as highly scored comments on a submission are rare compared to the total number of comments.  
+There is definitely room for improvements in the cleaning and sentiment analysis parts of the project. Reddit and social media comments are filled with all sorts of slang, abbreviations, and weird punctuation. Focusing more on cleaning comments and using a different sentiment analysis library could to handle these comments better. Anomaly detection algorithms would also be appropriate for this project, as highly scored comments on a submission are rare compared to the total number of comments.  
 
 ## Project Source  
 
