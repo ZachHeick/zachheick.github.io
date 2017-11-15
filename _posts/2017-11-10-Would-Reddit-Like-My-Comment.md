@@ -3,7 +3,7 @@ layout: post
 title: Would Reddit Like My Comment?  
 ---  
 
-In today’s age of information, social media has become the most popular medium for sharing ideas and expressing one’s opinion, whether that be on politics or what the best genre of music is. But are all opinions treated equally on the internet? The fourth project at Metis focused on utilizing unsupervised and supervised learning techniques on datasets of our choice. One of my favorite social media platforms is <span style="color:#ff5700">Reddit</span>. For this project, I was specifically interested in using Natural Language Processing and classification techniques and seeing what information I could draw from looking at Reddit comments and their content.  
+In today’s age of information, social media has become the most popular medium for sharing ideas and expressing one’s opinion, whether that be on politics or what the best genre of music is. But are all opinions treated equally on the internet? The fourth project at Metis focused on utilizing unsupervised and supervised learning techniques on datasets of our choice. One of my favorite social media platforms is <span style="color:#ff5700">Reddit</span>. For this project, I was specifically interested in using Natural Language Processing and classification techniques to see what information I could draw from looking at Reddit comments and their content.  
 
 ## Reddit's Comment Scoring System  
 
@@ -17,11 +17,13 @@ When a user makes a comment on a submission, they are given an intial score of 1
 
 While the comment scoring system on Reddit is working as designed, users are also taking advantage of it as well. If someone posts a genuine comment giving an opinion that does not agree with the majority of Reddit users' opinions, that comment will be downvoted out of disagreement, driving the comment score down and eventually pushing the comment out of default visability. This results in many subreddits and submissions becoming "echo chambers"; a place where the same opinion or viewpoint is being iterated over and over again without any discussion from opposing sides.  
 
+Note: a **subreddit** is similar to a discussion board or forum focused on a certain topic.  
+
 With this in mind, I wanted to see if I could predict how different subreddits view comments based on the context of the comment itself.  
 
-## Data Collection and Storage  
+## Data Collection, Storage, and Cleaning    
 
-I used PRAW (Python Reddit API Wrapper) to collect about 200,000 comments from various subreddits:
+I used PRAW (Python Reddit API Wrapper) to collect about 200,000 total comments from various subreddits:
 
    * /r/atheism
    * /r/hiphopheads
@@ -29,7 +31,9 @@ I used PRAW (Python Reddit API Wrapper) to collect about 200,000 comments from v
    * /r/science
    * /r/worldnews
 
-Continue...  
+I stored comments from each subreddit into their own collection in MongoDB hosted by AWS.
+
+## Flask App  
 
 ## Modeling  
 
