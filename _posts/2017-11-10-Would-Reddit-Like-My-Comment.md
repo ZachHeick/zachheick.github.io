@@ -23,11 +23,11 @@ With this in mind, I wanted to see if I could predict how different subreddits v
 
 I used PRAW (Python Reddit API Wrapper) to collect about 200,000 comments from various subreddits:
 
-    * /r/atheism
-    * /r/hiphopheads
-    * /r/politics
-    * /r/science
-    * /r/worldnews
+   * /r/atheism
+   * /r/hiphopheads
+   * /r/politics
+   * /r/science
+   * /r/worldnews
 
 Continue...  
 
