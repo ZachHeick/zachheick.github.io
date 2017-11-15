@@ -34,7 +34,6 @@ I used PRAW (Python Reddit API Wrapper) to collect about 200,000 total comments 
 Comments from each subreddit were stored into their own collection in a MongoDB database hosted by AWS. Before the comments could be vectorized for modeling, they needed to be cleaned. Raw Reddit comments are very similar to [markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/), so cleaning involved removing extra symbols, punctuation, emojis, and hyperlinks. Many Reddit comments also reference either the submission article or quote another user. The Reddit comment notation was very inconsistent when it came to making these references within comments, so these comments ended up getting tossed out.  
 
 ![Lemmatization Example](https://zachheick.github.io/images/Project_Fletcher_images/lemma_example.png){: .center-image }  
- 
 
 ## Other Features  
 
