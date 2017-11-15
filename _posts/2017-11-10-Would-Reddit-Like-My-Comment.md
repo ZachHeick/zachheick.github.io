@@ -17,7 +17,7 @@ When a user makes a comment on a submission, they are given an intial score of 1
 
 While the comment scoring system on Reddit is working as designed, users are also taking advantage of it as well. If someone posts a genuine comment giving an opinion that does not agree with the majority of Reddit users' opinions, that comment will be downvoted out of disagreement, driving the comment score down and eventually pushing the comment out of default visability. This results in many subreddits and submissions becoming "echo chambers"; a place where the same opinion or viewpoint is being iterated over and over again without any discussion from opposing sides.  
 
-Note: a **subreddit** is similar to a discussion board or forum focused on a certain topic.  
+Note: a **subreddit** is similar to a discussion board or forum focused on a certain topic. Reddit is an aggregation of subreddits.    
 
 With this in mind, I wanted to see if I could predict how different subreddits view comments based on the context of the comment itself.  
 
@@ -31,7 +31,12 @@ I used PRAW (Python Reddit API Wrapper) to collect about 200,000 total comments 
    * /r/science
    * /r/worldnews
 
-I stored comments from each subreddit into their own collection in MongoDB hosted by AWS.
+Comments from each subreddit were stored into their own collection in a MongoDB database hosted by AWS. Before the comments could be vectorized for modeling, they needed to be cleaned. Raw Reddit comments are very similar to [markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/), so cleaning involved removing extra symbols, punctuation, emojis, and hyperlinks. Many Reddit comments also reference either the submission article or quote another user. The Reddit comment notation was very inconsistent when it came to making these references within comments, so these comments ended up getting tossed out.  
+
+![Lemmatization Example](https://zachheick.github.io/images/Project_Fletcher_images/lemma_example.png){: .center-image }  
+ 
+
+## Other Features  
 
 ## Flask App  
 
