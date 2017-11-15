@@ -7,6 +7,7 @@ tags: archive
 
 ### November 2017  
 
+[Would Reddit Like My Comment](https://zachheick.github.io/2017/11/10/Would-Reddit-Like-My-Comment/)  
 
 ### October 2017  
 
