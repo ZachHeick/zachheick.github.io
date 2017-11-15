@@ -49,11 +49,19 @@ Before I could begin modeling, I needed to bin and classify the comment scores. 
 
 ![Recall Scores](https://zachheick.github.io/images/Project_Fletcher_images/score_vs_recall.png){: .center-image }  
 
-Once I got my pipeline down, it was easy to feed in comments from a certain subreddit and create a Decision Tree model for that subreddit with the best parameters. A dummy model was also created for comparison, where the dummy guessed "not liked" for every comment. 
+Once I got my pipeline down, it was easy to feed in comments from a subreddits and create a Decision Tree model for that subreddit with the best parameters. A dummy model was also created for comparison, where the dummy guessed "not liked" for every comment. 
 
 ## Flask App  
 
 ## Final Thoughts, What I Learned, and Future Work  
+
+I really enjoyed working with some NLP techniques, and seeing how words and language could be converted to numerical values with meaning. The models for each subreddit all out-performed their respective dummy model, which was great, but the final recall scoresvaried greatly.  
+
+One idea for improving recall score would be to analyze and include the title of the submission or article that comments were discussing. For this project I generalized comments with subreddit, and adding in the title of posts could have made a positive difference.  
+
+Comments on Reddit could have replies to them, and those replies could also have replies, and so on and so forth. In this project I only collected comments that were *not* replies, just general comments. Including comment replies could also help improve recall score.  
+
+There could definitely be improvements in the cleaning and sentiment analysis parts of the project. Reddit and social media comments are filled with all sorts of slang, abbreviations, and weird punctuation. Focusing more on cleaning comments and using a different sentiment analysis library could to handle these comments better.  
 
 ## Project Source  
 
