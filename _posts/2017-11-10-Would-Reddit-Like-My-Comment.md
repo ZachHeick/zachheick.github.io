@@ -31,19 +31,25 @@ I used PRAW (Python Reddit API Wrapper) to collect about 200,000 total comments 
    * /r/science
    * /r/worldnews
 
-Comments from each subreddit were stored into their own collection in a MongoDB database hosted by AWS. Before the comments could be vectorized for modeling, they needed to be cleaned. Raw Reddit comments are very similar to [markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/), so cleaning involved removing extra symbols, punctuation, emojis, and hyperlinks. Stop words, such as *the*, *is*, *a*, and *on* are removed as well. Many Reddit comments also reference either the submission article or quote another user. The Reddit comment notation was very inconsistent when it came to making these references within comments, so these comments ended up getting tossed out.    
+Comments from each subreddit were stored into their own collection in a MongoDB database hosted by AWS. Before the comments could be vectorized for modeling, they needed to be cleaned. Raw Reddit comments are very similar to [markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/), so cleaning involved removing extra symbols, punctuation, emojis, and hyperlinks. Stop words, such as *the*, *is*, *a*, and *on* were removed as well. Many Reddit comments also reference either the submission article or quote another user. The Reddit comment notation was very inconsistent when it came to making these references within comments, so these type of comments ended up getting tossed out.    
 
 Comments are going to use different forms of a word, such as *swim*, *swims*, and *swimming*. Also, slightly different words belong to families of similar meaning, like *democracy*, *democratic*, and *democratization*.  
 
 ![Lemmatization Example](https://zachheick.github.io/images/Project_Fletcher_images/lemma_example.png){: .center-image }  
 
-The best way to handle this is a technique called **lemmatization**, the process of grouping together the inflected forms of a word so they can be analysed as a single base item. After the cleaned comments were lemmatized, they could now be vectorized. I used **tf-idf (term frequency–inverse document frequency)** to create the final matrix of feature vectors.  
+The best way to handle this is a technique called **lemmatization**, the process of grouping together the inflected forms of a word so they can be analysed as a single base item. After the cleaned comments were lemmatized, they could now be vectorized. Finally, I used **tf-idf (term frequency–inverse document frequency)** to create the final matrix of feature vectors.  
 
-## Other Features  
+## Sentiment Analysis and Other Features  
+
+I used the [TextBlob](https://textblob.readthedocs.io/en/dev/) library for sentiment analysis. For each Reddit comment, I looked at the objectivity and subjectivity of each comment, where a value of 0.0 is very objective and 1.0 is very subjective. I also looked at the polarity of the comment was by sentence, where -1.0 is very negative and 1.0 is very positive. Other features I included were comment character count and word count. I combined the features from sentiment analysis and comment metadata with the matrix created previously to get my final data matrix for modeling.   
 
 ## Modeling  
 
-![Recall Scores](https://zachheick.github.io/images/Project_Fletcher_images/score_vs_recall.png){: .center-image }
+Before I could begin modeling, I needed to bin and classify the comment scores. To do this, I set a score threshold of 50 points, and said that if a comment score was 50 or below, the subreddit did not like the comment. If the comment was greater than 50, the subreddit did like the comment. The classified comment scores were unbalanced, so I used a Decision Tree to handle classification. I used recall because I wanted to minimize false negatives, meaning I did not want to misclassify as "not liked" when the comment should have been "liked".  
+
+![Recall Scores](https://zachheick.github.io/images/Project_Fletcher_images/score_vs_recall.png){: .center-image }  
+
+Once I got my pipeline down, it was easy to feed in comments from a certain subreddit and create a Decision Tree model for that subreddit with the best parameters. A dummy model was also created for comparison, where the dummy guessed "not liked" for every comment. 
 
 ## Flask App  
 
