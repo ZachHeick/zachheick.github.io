@@ -21,13 +21,22 @@ With this in mind, I wanted to see if I could predict how different subreddits v
 
 ## Data Collection and Storage  
 
-I used PRAW (Python Reddit API Wrapper) to collect about 200,000 comments from various subreddits:  
+I used PRAW (Python Reddit API Wrapper) to collect about 200,000 comments from various subreddits:
 
   * /r/atheism
   * /r/hiphopheads
   * /r/politics
   * /r/science
   * /r/worldnews
+
+  * Apples
+  * Oranges
+  * Potatoes
+  * Milk
+
+  1. Mow the lawn
+  2. Feed the dog
+  3. Dance
 
 Continue...  
 
