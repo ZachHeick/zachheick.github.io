@@ -57,7 +57,7 @@ I really enjoyed working with some NLP techniques, and seeing how words and lang
 
 One idea for improving recall score would be to analyze and include the title of the submission or article that comments were discussing. For this project I generalized comments with subreddit, and adding in the title of posts could have made a positive difference. Comments on Reddit could have replies to them, and those replies could also have replies, and so on and so forth. In this project I only collected comments that were *not* replies, just general comments. Including comment replies might also help improve recall score.  
 
-There is definitely room for improvements in the cleaning and sentiment analysis parts of the project. Reddit and social media comments are filled with all sorts of slang, abbreviations, and weird punctuation. Focusing more on cleaning comments and using a different sentiment analysis library could to handle these comments better. Anomaly detection algorithms would also be appropriate for this project, as highly scored comments on a submission are rare compared to the total number of comments.  
+There is definitely room for improvements in the cleaning and sentiment analysis parts of the project. Reddit and social media comments are filled with all sorts of slang, abbreviations, and weird punctuation. Focusing more on cleaning comments and using a different sentiment analysis library could handle these comments better. Anomaly detection algorithms would also be appropriate for this project, as highly scored comments on a submission are rare compared to the total number of comments.  
 
 ## Project Source  
 
