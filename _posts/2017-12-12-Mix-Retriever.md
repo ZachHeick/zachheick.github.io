@@ -13,9 +13,13 @@ If we want a playlist built around a certain song that we like, we could look fo
 
 To combine the functionality of individual song-based playlist generators with a focus on making content based recommendations, I created a web app, [Mix Retriever](http://www.mixretriever.com/), that builds a hip-hop playlist of songs with similar lyrical meaning and mood around a song specified by the user.  
 
-## How is the Playlist Made?  
+How de we get from a single song to a playlist of similar songs?    
 
-Lorem Ipsum.  
+## Data Collection and Storage  
+
+I started with
+
+## Making the Playlist  
 
 ## Project Source  
 
