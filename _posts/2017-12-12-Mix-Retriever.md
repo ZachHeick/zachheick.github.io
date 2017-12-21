@@ -1,6 +1,6 @@
 ---  
 layout: post  
-title: Mix Retriever: A Hip-Hop Playlist Generator   
+title: Mix Retriever &#58; A Hip-Hop Playlist Generator   
 ---  
 
 Lorem Ipsum.
