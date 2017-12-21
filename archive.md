@@ -5,6 +5,7 @@ title: Archive
 tags: archive  
 ---  
 
+[Mix Retriever: A Hip-Hop Playlist Generator](https://zachheick.github.io/2017/12/12/Mix-Retriever/)  
 [Would Reddit Like My Comment](https://zachheick.github.io/2017/11/10/Would-Reddit-Like-My-Comment/)  
 [Introduction to Graph Databases with Neo4j](https://zachheick.github.io/2017/10/26/Introduction-to-Graph-Databases-with-Neo4j/)  
 [Supervised Learning and Online Gaming](https://zachheick.github.io/2017/10/25/Supervised-Learning-and-Online-Gaming/)  
