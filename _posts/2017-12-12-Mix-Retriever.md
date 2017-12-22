@@ -15,15 +15,17 @@ If we want a playlist built around a certain song that we like, we could look fo
 
 To combine the functionality of individual song-based playlist generators with a focus on making content based recommendations, I created a web app, [Mix Retriever](http://www.mixretriever.com/), that builds a hip-hop playlist of songs with similar lyrical meaning and mood around a song specified by the user.  
 
-So, how do we go from a single song to a playlist of similar songs?    
-
 ## Data Collection and Storage  
 
 The data used in this project was collected from multiple sources. I scraped a list of hip-hop artists from Wikipedia, and then used the Spotify API to get metadata for the song of each artist. This metadata included the song's audio preview, album art, as well as other song metrics. These song metrics (energy, tempo, and speechiness) combined with subjectivity and polarity values from sentiment analysis of each song where used as features and quantified what the mood of a song was. To get the song lyrics, I used [PyLyrics](https://pypi.python.org/pypi/PyLyrics/), which scrapes song lyrics from the Lyrics Wiki website.  
 
-All of my data was stored in a PostgreSQL database hosted by Amazon Web Services. After removing duplicate songs and songs with missing data points, I had a corpus of 19831 songs.  
+All of my data was stored in a PostgreSQL database hosted by Amazon Web Services. After removing duplicates and songs with missing data points, I had a corpus of 19831 songs.  
 
-## Making the Playlist  
+## Training the Model  
+
+Before I could do anything with the lyrics I needed to clean them up, which involved converting words to lowercase, removing punctuation and stopwords, and correcting some slang terminology. I needed to get lyrics into feature space like the mood features collected from before. Using the song lyrics only I trained a neural network with a single hidden layer called Song2vec. This single hidden layer puts all of the songs into feature space based on lyrics.  
+
+## Making the Playlist from the Feature Space  
 
 ## Project Source  
 
