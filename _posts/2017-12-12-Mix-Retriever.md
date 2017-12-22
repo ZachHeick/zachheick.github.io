@@ -29,9 +29,11 @@ Before I could do anything with the lyrics I needed to clean them up, which invo
 
 For example, lets say we want to make a playlist of similar songs to the song "Ivy" by Frank Ocean. "Ivy" is a very slow and mellow song where Frank reflects on a past relationship and his conflicting feelings.  
 
-![Recall Scores](https://zachheick.github.io/images/Project_Kojak_images/frank_ocean_lyrics.png){: .center-image }  
+![Frank Lyrics](https://zachheick.github.io/images/Project_Kojak_images/frank_ocean_lyrics.png){: .center-image }  
 
 Lorem Ipsum.  
+
+![Results Lyrics](https://zachheick.github.io/images/Project_Kojak_images/results_lyrics.png){: .center-image }  
 
 ## Project Source  
 
