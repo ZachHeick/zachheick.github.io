@@ -15,6 +15,8 @@ If we want a playlist built around a certain song that we like, we could look fo
 
 To combine the functionality of individual song-based playlist generators with a focus on making content based recommendations, I created a web app, [Mix Retriever](http://www.mixretriever.com/), that builds a hip-hop playlist of songs with similar lyrical meaning and mood around a song specified by the user.  
 
+![Album Art](https://zachheick.github.io/images/Project_Kojak_images/mix_retriever_logo.png){: .center-image }  
+
 ## Data Collection and Storage  
 
 The data used in this project was collected from multiple sources. I scraped a list of hip-hop artists from Wikipedia, and then used the Spotify API to get metadata for the song of each artist. This metadata included the song's audio preview, album art, as well as other song metrics. These song metrics (energy, tempo, and speechiness) combined with subjectivity and polarity values from sentiment analysis of each song where used as features and quantified what the mood of a song was. To get the song lyrics, I used [PyLyrics](https://pypi.python.org/pypi/PyLyrics/), which scrapes song lyrics from the Lyrics Wiki website.  
@@ -27,15 +29,15 @@ Before I could do anything with the lyrics I needed to clean them up, which invo
 
 ## Making the Playlist from Feature Space  
 
-For example, lets say we want to make a playlist of similar songs to the song "Ivy" by Frank Ocean. "Ivy" is a very slow and mellow song where Frank reflects on a past relationship and his conflicting feelings.  
+For example, lets say we want to make a playlist of similar songs to the song <span class="red">Ivy by Frank Ocean</span>. With a very slow and mellow mood, Frank reflects on a past relationship and his conflicting feelings.  
 
 ![Frank Lyrics](https://zachheick.github.io/images/Project_Kojak_images/frank_ocean_lyrics.png){: .center-image }  
 
-Lorem Ipsum.  
+The Song2vec model's single hidden layer of 100 nodes puts the songs into feature space.  
 
 ![100 Dimensions](https://zachheick.github.io/images/Project_Kojak_images/100_dimensional_space.png){: .center-image }  
 
-Lorem Ipsum.  
+As of now, the location of the songs in this space is based on lyrics *only*, where songs with similar lyrical themes appear closer to one another. Currently, the space is too large 
 
 ![30 Dimensions](https://zachheick.github.io/images/Project_Kojak_images/30_dimensional_space.png){: .center-image }  
 
