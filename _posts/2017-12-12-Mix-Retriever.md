@@ -29,7 +29,7 @@ Before I could do anything with the lyrics I needed to clean them up, which invo
 
 ## Making the Playlist from Feature Space  
 
-For example, lets say we want to make a playlist of similar songs to the song <span class="red">Ivy by Frank Ocean</span>. With a very slow and mellow mood, Frank reflects on a past relationship and his conflicting feelings in this track.  
+Using the data collected and our trained model, how do we get a playlist of similar songs given a single song? For example, lets say we want to make a playlist of similar songs to the song <span class="red">Ivy by Frank Ocean</span>. With a very slow and mellow mood, Frank reflects on a past relationship and his conflicting feelings in this track.  
 
 ![Frank Lyrics](https://zachheick.github.io/images/Project_Kojak_images/frank_ocean_lyrics.png){: .center-image }  
 
