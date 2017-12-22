@@ -25,7 +25,7 @@ All of my data was stored in a PostgreSQL database hosted by Amazon Web Services
 
 ## Training the Model  
 
-Before I could do anything with the lyrics I needed to clean them up, which involved converting words to lowercase, removing punctuation and stopwords, and correcting some slang terminology. I needed to get lyrics into feature space like the mood features collected from before. Using the song lyrics only I trained a neural network with a single hidden layer called Song2vec. This single hidden layer puts all of the songs into feature space based on lyrics.  
+Before I could do anything with the lyrics I needed to clean them up, which involved converting words to lowercase, removing punctuation and stopwords, and correcting some slang terminology. I needed to get lyrics into feature space with the mood features collected from before. Using the song lyrics only I trained a neural network with a single hidden layer called Song2vec. This single hidden layer puts all of the songs into feature space based on lyrics. We'll explore this space to find songs that are similar to one another.   
 
 ## Making the Playlist from Feature Space  
 
@@ -33,11 +33,11 @@ For example, lets say we want to make a playlist of similar songs to the song <s
 
 ![Frank Lyrics](https://zachheick.github.io/images/Project_Kojak_images/frank_ocean_lyrics.png){: .center-image }  
 
-The Song2vec model's single hidden layer of 100 nodes puts the songs into feature space. As of now, the location of the songs in this space is based on lyrics *only*, where songs with similar lyrical themes to our example appear closer to it.  
+Mentioned previously, the Song2vec model's single hidden layer of 100 nodes puts the songs into feature space. As of now, the location of the songs in this space is based on *lyrics only*, where songs with similar lyrical themes to our example appear closer to it.  
 
 ![100 Dimensions](https://zachheick.github.io/images/Project_Kojak_images/100_dimensional_space.png){: .center-image }  
 
-Right now its hard to tell which songs have similar lyrics to one another because the distances between them are so large. A technique called "Singular-value Decomposition" reduces the size of the space from 100 features to 25. The mood features collected from before, such as energy, speechiness, tempo, subjectivity, and polarity are added to this feature space to get a final space of 30 features.    
+Right now its hard to tell which songs have similar lyrics to one another because the distances between them are so large. A technique called "Singular-value Decomposition" reduces the size of the space from 100 features to 25, putting songs with similar lyrical themes closer to each other. The mood features collected from before, such as energy, speechiness, tempo, subjectivity, and polarity are added to this feature space to get a final space of 30 features.    
 
 ![30 Dimensions](https://zachheick.github.io/images/Project_Kojak_images/30_dimensional_space.png){: .center-image }  
 
@@ -45,13 +45,15 @@ After using SVD and adding the mood features to our feature space, we now have s
 
 ![Nearest Neighbors](https://zachheick.github.io/images/Project_Kojak_images/nearest_neighbors.png){: .center-image }  
 
-Below are some similar songs to <span class="red">Ivy by Frank Ocean</span>. These songs are also very slow and mellow and mood, and the artists talk about their struggles with themselves and reflect on past relationships as well.  
+Below are some similar songs to <span class="red">Ivy by Frank Ocean</span>. These songs are also very slow and mellow in mood, and the artists talk about their struggles with themselves and reflect on past relationships as well.  
 
 ![Results Lyrics](https://zachheick.github.io/images/Project_Kojak_images/results_lyrics.png){: .center-image }  
 
-Lorem Ipsum.  
+## Final Thoughts and Future Work  
 
-## Final Thoughts, Applications, and Future Work  
+I'm really proud of my final project at Metis, and had a great time presenting it to potential employers on career day. Trying to quantify something as subjective as music proved to be a challenge, but I'm happy with the results.  
+
+Moving forward, I would like to get more songs, including songs from other genres. The Song2vec model used earlier performs better the more data you feed in, and neural networks need a lot of data! I would also like to incorporate some topic modeling to try and give users a small description or tag about what the theme of the playlist they've created.  
 
 ## Project Source  
 
