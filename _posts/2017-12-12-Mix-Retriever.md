@@ -33,7 +33,13 @@ For example, lets say we want to make a playlist of similar songs to the song "I
 
 Lorem Ipsum.  
 
+![100 Dimensions](https://zachheick.github.io/images/Project_Kojak_images/100_dimensional_space.png){: .center-image }  
+
+Lorem Ipsum.  
+
 ![Results Lyrics](https://zachheick.github.io/images/Project_Kojak_images/results_lyrics.png){: .center-image }  
+
+Lorem Ipsum.  
 
 ## Project Source  
 
