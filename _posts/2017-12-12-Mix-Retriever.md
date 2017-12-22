@@ -37,7 +37,11 @@ Lorem Ipsum.
 
 Lorem Ipsum.  
 
-![30 Dimensions](https://zachheick.github.io/images/Project_Kojak_images/30_dimensional_space.png){: .center-image }
+![30 Dimensions](https://zachheick.github.io/images/Project_Kojak_images/30_dimensional_space.png){: .center-image }  
+
+Lorem Ipsum.  
+
+![30 Dimensions](https://zachheick.github.io/images/Project_Kojak_images/nearest_neighbors.png){: .center-image }  
 
 Lorem Ipsum.  
 
