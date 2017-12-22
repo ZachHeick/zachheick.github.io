@@ -41,11 +41,11 @@ Right now its hard to tell which songs have similar lyrics to one another becaus
 
 ![30 Dimensions](https://zachheick.github.io/images/Project_Kojak_images/30_dimensional_space.png){: .center-image }  
 
-After using SVD and adding the mood features to our feature space, we now have songs with both similar lyrical meaning and mood closer to one another. To get the playlist of similar songs to our example, we use the <span class="orange">Nearest Neighbors</span> algorithm to find the 9 nearest songs. We now have our playlist!  
+After using SVD and adding the mood features to our feature space, we now have songs with both similar lyrical meaning and mood closer to one another. To get the playlist of similar songs to our example, we use the <span style="color:#fb8c00">Nearest Neighbors</span> algorithm to find the 9 nearest songs. We now have our playlist!  
 
 ![Nearest Neighbors](https://zachheick.github.io/images/Project_Kojak_images/nearest_neighbors.png){: .center-image }  
 
-Lorem Ipsum.  
+Below are some similar songs to <span class="red">Ivy by Frank Ocean</span>. These songs are also very slow and mellow and mood, and the artists talk about their struggles with themselves and reflect on past relationships as well.  
 
 ![Results Lyrics](https://zachheick.github.io/images/Project_Kojak_images/results_lyrics.png){: .center-image }  
 
