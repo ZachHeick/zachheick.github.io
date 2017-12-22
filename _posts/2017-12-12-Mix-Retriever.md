@@ -7,6 +7,8 @@ I love discovering new music, especially when it comes to Hip-Hop. Today, music 
 
 ## Current Solutions  
 
+![Mixtapes](https://zachheick.github.io/images/Project_Kojak_images/mixtapes.gif){: .center-image }  
+
 If we want a playlist built around a certain song that we like, we could look for a playlist someone else already made, but a playlist might not exist for that song. Another option is using an existing playlist generator. These existing playlist generators prioritize artists and genres, as well as looking at similar songs others have listened to. Some things that might not be prioritized or included at all in these playlist generators are the lyrical meanings between songs in a playlist and the overall "mood" of the playlist. Lyrical similarities between songs paired with a similar mood can make playlists much more cohesive and personal.  
 
 ## My Solution  
