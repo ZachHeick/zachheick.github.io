@@ -3,7 +3,7 @@ layout: post
 title: Mix Retriever&#58; A Hip-Hop Playlist Generator   
 ---  
 
-I love discovering new music, especially when it comes to hip-hop. Today, music streaming platforms offer thousands of dynamic playlists for finding new music that cover topics such as specific artists, genres, time of year, and many more. *What if we can't find a playlist built around a particular song that we like*? For the fifth and final project at Metis, we were given the freedom to solve any problem we were interested using any of the data science techniques and technologies we've learned from the bootcamp. My favorite topics covered were NLP and recommendation systems, and I wanted to solve this problem with techniques from these topics.  
+I love discovering new music, especially when it comes to hip-hop. Today, music streaming platforms offer thousands of dynamic playlists for finding new music that cover topics such as specific artists, genres, time of year, and many more. *But what if we can't find a playlist built around a particular song that we like*? For the fifth and final project at Metis, we were given the freedom to solve any problem we were interested using any of the data science techniques and technologies we've learned from the bootcamp. My favorite topics covered were NLP and recommendation systems, and I wanted to solve this problem with techniques from these topics.  
 
 ![Album Art](https://zachheick.github.io/images/Project_Kojak_images/album_art.png){: .center-image }  
 
@@ -15,6 +15,8 @@ If we want a playlist built around a certain song that we like, we could look fo
 
 To combine the functionality of individual song-based playlist generators with a focus on making content based recommendations, I created a web app, [Mix Retriever](http://www.mixretriever.com/), that builds a hip-hop playlist of songs with similar lyrical meaning and mood around a song specified by the user.  
 
+![Nearest Neighbors](https://zachheick.github.io/images/Project_Kojak_images/mix_retriever_logo.png){: .center-image }  
+
 ## Data Collection and Storage  
 
 The data used in this project was collected from multiple sources. I scraped a list of hip-hop artists from Wikipedia, and then used the Spotify API to get metadata for the song of each artist. This metadata included the song's audio preview, album art, as well as other song metrics. These song metrics (energy, tempo, and speechiness) combined with subjectivity and polarity values from sentiment analysis of each song where used as features and quantified what the mood of a song was. To get the song lyrics, I used [PyLyrics](https://pypi.python.org/pypi/PyLyrics/), which scrapes song lyrics from the Lyrics Wiki website.  
@@ -25,7 +27,7 @@ All of my data was stored in a PostgreSQL database hosted by Amazon Web Services
 
 Before I could do anything with the lyrics I needed to clean them up, which involved converting words to lowercase, removing punctuation and stopwords, and correcting some slang terminology. I needed to get lyrics into feature space like the mood features collected from before. Using the song lyrics only I trained a neural network with a single hidden layer called Song2vec. This single hidden layer puts all of the songs into feature space based on lyrics.  
 
-## Making the Playlist from the Feature Space  
+## Making the Playlist from Feature Space  
 
 For example, lets say we want to make a playlist of similar songs to the song "Ivy" by Frank Ocean. "Ivy" is a very slow and mellow song where Frank reflects on a past relationship and his conflicting feelings.  
 
@@ -41,13 +43,15 @@ Lorem Ipsum.
 
 Lorem Ipsum.  
 
-![30 Dimensions](https://zachheick.github.io/images/Project_Kojak_images/nearest_neighbors.png){: .center-image }  
+![Nearest Neighbors](https://zachheick.github.io/images/Project_Kojak_images/nearest_neighbors.png){: .center-image }  
 
 Lorem Ipsum.  
 
 ![Results Lyrics](https://zachheick.github.io/images/Project_Kojak_images/results_lyrics.png){: .center-image }  
 
 Lorem Ipsum.  
+
+## Final Thoughts, Applications, and Future Work  
 
 ## Project Source  
 
