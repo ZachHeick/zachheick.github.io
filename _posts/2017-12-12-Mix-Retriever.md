@@ -15,8 +15,6 @@ If we want a playlist built around a certain song that we like, we could look fo
 
 To combine the functionality of individual song-based playlist generators with a focus on making content based recommendations, I created a web app, [Mix Retriever](http://www.mixretriever.com/), that builds a hip-hop playlist of songs with similar lyrical meaning and mood around a song specified by the user.  
 
-![Nearest Neighbors](https://zachheick.github.io/images/Project_Kojak_images/mix_retriever_logo.png){: .center-image }  
-
 ## Data Collection and Storage  
 
 The data used in this project was collected from multiple sources. I scraped a list of hip-hop artists from Wikipedia, and then used the Spotify API to get metadata for the song of each artist. This metadata included the song's audio preview, album art, as well as other song metrics. These song metrics (energy, tempo, and speechiness) combined with subjectivity and polarity values from sentiment analysis of each song where used as features and quantified what the mood of a song was. To get the song lyrics, I used [PyLyrics](https://pypi.python.org/pypi/PyLyrics/), which scrapes song lyrics from the Lyrics Wiki website.  
