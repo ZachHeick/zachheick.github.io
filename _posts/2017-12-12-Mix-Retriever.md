@@ -5,8 +5,6 @@ title: Mix Retriever&#58; A Hip-Hop Playlist Generator
 
 I love discovering new music, especially when it comes to hip-hop. Today, music streaming platforms offer thousands of dynamic playlists for finding new music that cover topics such as specific artists, genres, time of year, and many more. *What if we can't find a playlist built around a particular song that we like*? For the fifth and final project at Metis, we were given the freedom to solve any problem we were interested using any of the data science techniques and technologies we've learned from the bootcamp. My favorite topics covered were NLP and recommendation systems, and I wanted to solve this problem with techniques from these topics.  
 
-![Mixtapes](https://zachheick.github.io/images/Project_Kojak_images/mixtapes.gif){: .center-image }  
-
 ## Current Solutions  
 
 If we want a playlist built around a certain song that we like, we could look for a playlist someone else already made, but a playlist might not exist for that song. Another option is to use an existing playlist generator. These existing playlist generators prioritize artists and genres, as well as looking at similar songs others have listened to. Some things that might not be prioritized or included at all in these playlist generators are the lyrical meanings between songs in a playlist and the overall "mood" of the playlist. Lyrical similarities between songs paired with a similar mood can make playlists much more cohesive and personal.  
@@ -26,6 +24,12 @@ All of my data was stored in a PostgreSQL database hosted by Amazon Web Services
 Before I could do anything with the lyrics I needed to clean them up, which involved converting words to lowercase, removing punctuation and stopwords, and correcting some slang terminology. I needed to get lyrics into feature space like the mood features collected from before. Using the song lyrics only I trained a neural network with a single hidden layer called Song2vec. This single hidden layer puts all of the songs into feature space based on lyrics.  
 
 ## Making the Playlist from the Feature Space  
+
+For example, lets say we want to make a playlist of similar songs to the song "Ivy" by Frank Ocean. "Ivy" is a very slow and mellow song where Frank reflects on a past relationship and his conflicting feelings.  
+
+![Recall Scores](https://zachheick.github.io/images/Project_Kojak_images/frank_ocean_lyrics.png){: .center-image }  
+
+Lorem Ipsum.  
 
 ## Project Source  
 
