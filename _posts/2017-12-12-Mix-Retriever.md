@@ -37,11 +37,11 @@ Mentioned previously, the Song2vec model's single hidden layer of 100 nodes puts
 
 ![100 Dimensions](https://zachheick.github.io/images/Project_Kojak_images/100_dimensional_space.png){: .center-image }  
 
-Right now its hard to tell which songs have similar lyrics to one another because the distances between them are so large. A technique called "Singular-value Decomposition" reduces the size of the space from 100 features to 25, putting songs with similar lyrical themes closer to each other. The mood features collected from before, such as energy, speechiness, tempo, subjectivity, and polarity are added to this feature space to get a final space of 30 features.    
+Right now its hard to tell which songs have similar lyrics to one another because the distances between them are so large. A technique called "Singular-value Decomposition" reduces the size of the space from 100 features to 25, putting songs with similar lyrical themes closer to each other. The mood features collected from before (energy, speechiness, tempo, subjectivity, and polarity) are added to this feature space to get a final space of 30 features.    
 
 ![30 Dimensions](https://zachheick.github.io/images/Project_Kojak_images/30_dimensional_space.png){: .center-image }  
 
-After using SVD and adding the mood features to our feature space, we now have songs with both similar lyrical meaning and mood closer to one another. To get the playlist of similar songs to our example, we use the <span style="color:#fb8c00">Nearest Neighbors</span> algorithm to find the 9 nearest songs. We now have our playlist!  
+After using SVD and adding the mood features to our feature space, we now have songs with both similar lyrical meaning and mood closer to one another. To get the playlist of similar songs to our example, we use the <span style="color:#fb8c00">Nearest Neighbors</span> algorithm to find the 9 nearest songs, and we now have our playlist!  
 
 ![Nearest Neighbors](https://zachheick.github.io/images/Project_Kojak_images/nearest_neighbors.png){: .center-image }  
 
