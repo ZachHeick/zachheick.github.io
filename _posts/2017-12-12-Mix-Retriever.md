@@ -29,15 +29,15 @@ Before I could do anything with the lyrics I needed to clean them up, which invo
 
 ## Making the Playlist from Feature Space  
 
-For example, lets say we want to make a playlist of similar songs to the song <span class="red">Ivy by Frank Ocean</span>. With a very slow and mellow mood, Frank reflects on a past relationship and his conflicting feelings.  
+For example, lets say we want to make a playlist of similar songs to the song <span class="red">Ivy by Frank Ocean</span>. With a very slow and mellow mood, Frank reflects on a past relationship and his conflicting feelings in this track.  
 
 ![Frank Lyrics](https://zachheick.github.io/images/Project_Kojak_images/frank_ocean_lyrics.png){: .center-image }  
 
-The Song2vec model's single hidden layer of 100 nodes puts the songs into feature space.  
+The Song2vec model's single hidden layer of 100 nodes puts the songs into feature space. As of now, the location of the songs in this space is based on lyrics *only*, where songs with similar lyrical themes to our example appear closer to it.  
 
 ![100 Dimensions](https://zachheick.github.io/images/Project_Kojak_images/100_dimensional_space.png){: .center-image }  
 
-As of now, the location of the songs in this space is based on lyrics *only*, where songs with similar lyrical themes appear closer to one another. Currently, the space is too large 
+Right now its hard to tell which songs are closer to one another because the distances are so large.
 
 ![30 Dimensions](https://zachheick.github.io/images/Project_Kojak_images/30_dimensional_space.png){: .center-image }  
 
