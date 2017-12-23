@@ -5,7 +5,7 @@ title: Mix Retriever&#58; A Hip-Hop Playlist Generator
 
 I love discovering new music, especially when it comes to hip-hop. Today, music streaming platforms offer thousands of dynamic playlists for finding new music that cover topics such as specific artists, genres, time of year, and many more. *But what if we can't find a playlist built around a particular song that we like*? For the fifth and final project at Metis, we were given the freedom to solve any problem we were interested using any of the data science techniques and technologies we've learned from the bootcamp. My favorite topics covered were NLP and recommendation systems, and I wanted to solve this problem with techniques from these topics.  
 
-![Album Art](https://zachheick.github.io/images/Project_Kojak_images/album_movie.m4v){: .center-image }  
+![Album Art](https://zachheick.github.io/images/Project_Kojak_images/album_movie.gif){: .center-image }  
 
 ## Current Solutions  
 
