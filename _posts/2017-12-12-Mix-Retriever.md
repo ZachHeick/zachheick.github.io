@@ -9,7 +9,7 @@ I love discovering new music, especially when it comes to hip-hop. Today, music 
 
 ## Current Solutions  
 
-If we want a playlist built around a certain song that we like, we could look for a playlist someone else already made, but a playlist might not exist for that song. Another option is to use an existing playlist generator. These existing playlist generators prioritize artists and genres, as well as looking at similar songs others have listened to. Some things that might not be prioritized or included at all in these playlist generators are the lyrical meanings between songs in a playlist and the overall "mood" of the playlist. Lyrical similarities between songs paired with a similar mood can make playlists much more cohesive and personal.  
+If we want a playlist built around a certain song that we like, we could look for a one someone else already made, but a playlist might not exist for that song. Another option is to use an existing playlist generator. These existing playlist generators prioritize artists and genres, as well as looking at similar songs others have listened to. Some things that might not be prioritized or included at all in these playlist generators are the lyrical meanings between songs in a playlist and the overall "mood" of the playlist. Lyrical similarities between songs paired with a similar mood can make playlists much more cohesive and personal.  
 
 ## My Solution  
 
@@ -48,6 +48,10 @@ After using SVD and adding the mood features to our feature space, we now have s
 Below are some similar songs to <span class="red">Ivy by Frank Ocean</span>. These songs are also very slow and mellow in mood, and the artists talk about their struggles with themselves and reflect on past relationships as well.  
 
 ![Results Lyrics](https://zachheick.github.io/images/Project_Kojak_images/results_lyrics.png){: .center-image }  
+
+## Testing the App and Analyzing Results  
+
+Music is very subjective and determining what made a playlist a good result was tricky. When testing the app, I focused on songs that had distinct themes throughout; partying, drugs and money, romance, etc. I generated playlists from these songs and analyzed the lyrics first, looking for similar themes. I would then listen to the songs on the playlist and compare them to the original input song. If the lyrical themes of the songs on the playlist weren't quite matching up with the input song, I would go back and tune the model's hyperparameters and features, generate playlists from a specific list of songs, analyze the results, and repeat until I got playlists that I was happy with.    
 
 ## Final Thoughts and Future Work  
 
