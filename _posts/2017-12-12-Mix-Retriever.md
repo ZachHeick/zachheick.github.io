@@ -13,19 +13,19 @@ If we want a playlist built around a certain song that we like, we could look fo
 
 ## My Solution  
 
-To combine the functionality of individual song-based playlist generators with a focus on making content based recommendations, I created a web app, [Mix Retriever](http://www.mixretriever.com/), that builds a hip-hop playlist of songs with similar lyrical meaning and mood around a song specified by the user.  
+To combine the functionality of individual song-based playlist generators with a focus on making content based recommendations, I created a [web app](http://www.mixretriever.com/) that builds a hip-hop playlist of songs with similar lyrical meaning and mood around a song specified by the user.  
 
 ![Album Art](https://zachheick.github.io/images/Project_Kojak_images/mix_retriever_logo.png){: .center-image }  
 
 ## Data Collection and Storage  
 
-The data used in this project was collected from multiple sources. I scraped a list of hip-hop artists from Wikipedia, and then used the Spotify API to get metadata for the song of each artist. This metadata included the song's audio preview, album art, as well as other song metrics. These song metrics (energy, tempo, and speechiness) combined with subjectivity and polarity values from sentiment analysis of each song where used as features and quantified what the mood of a song was. To get the song lyrics, I used [PyLyrics](https://pypi.python.org/pypi/PyLyrics/), which scrapes song lyrics from the Lyrics Wiki website.  
+The data used in this project was collected from multiple sources. I scraped a list of hip-hop artists from Wikipedia, and then used the Spotify API to get metadata for the song of each artist. This metadata included the song's audio preview, album art, as well as other song metrics. These song metrics (energy, tempo, and speechiness) combined with subjectivity and polarity values from sentiment analysis of each song where used as features and quantified what the mood of a song was. To get the song lyrics, I used [PyLyrics](https://pypi.python.org/pypi/PyLyrics/) to scrape song lyrics from the Lyrics Wiki website.  
 
 All of my data was stored in a PostgreSQL database hosted by Amazon Web Services. After removing duplicates and songs with missing data points, I had a corpus of 19831 songs.  
 
 ## Training the Model  
 
-Before I could do anything with the lyrics I needed to clean them up, which involved converting words to lowercase, removing punctuation and stopwords, and correcting some slang terminology. I needed to get lyrics into feature space with the mood features collected from before. Using the song lyrics only I trained a neural network with a single hidden layer called Song2vec. This single hidden layer puts all of the songs into feature space based on lyrics. We'll explore this space to find songs that are similar to one another.   
+Before I could do anything with the lyrics, I cleaned them up, which involved converting words to lowercase, removing punctuation and stopwords, and correcting some slang terminology. I needed to get lyrics into feature space with the mood features collected from before. Using the song lyrics only I trained a neural network with a single hidden layer called Song2vec. This single hidden layer puts all of the songs into feature space based on lyrics. I explored this space to find songs that were similar to one another.   
 
 ## Making the Playlist from Feature Space  
 
@@ -53,7 +53,7 @@ Below are some similar songs to <span class="red">Ivy by Frank Ocean</span>. The
 
 I'm really proud of my final project at Metis, and had a great time presenting it to potential employers on career day. Trying to quantify something as subjective as music proved to be a challenge, but I'm happy with the results.  
 
-Moving forward, I would like to get more songs, including songs from other genres. The Song2vec model used earlier performs better the more data you feed in, and neural networks need a lot of data! I would also like to incorporate some topic modeling to try and give users a small description or tag about what the theme of the playlist they've created.  
+Moving forward, I would like to get more songs, including songs from other genres. The Song2vec model used earlier performs better the more data you feed in, and neural networks need a lot of data! I would also like to incorporate some topic modeling to try and give users a small description or tag about the theme of the playlist they've created.  
 
 ## Project Source  
 
