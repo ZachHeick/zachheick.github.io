@@ -13,7 +13,7 @@ If we want a playlist built around a certain song that we like, we could look fo
 
 ## My Solution  
 
-To combine the functionality of individual song-based playlist generators with a focus on making content based recommendations, I created a [web app](http://www.mixretriever.com/) that builds a hip-hop playlist of songs with similar lyrical meaning and mood around a song specified by the user.  
+To combine the functionality of individual song-based playlist generators with a focus on making content based recommendations, I created a [web app](http://www.mixretriever.com/) that builds a hip-hop playlist of songs with similar lyrical meaning and mood around a song specified by the user. The app is best viewed at fullscreen and is currently nonresponsive.   
 
 ![Album Art](https://zachheick.github.io/images/Project_Kojak_images/mix_retriever_logo.png){: .center-image }  
 
