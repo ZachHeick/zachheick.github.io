@@ -9,9 +9,9 @@ Through my own research, I found that the area of *data science* utilizes both m
 
 It's now early May 2017. I've graduated (hooray!), and I'm now back home in Park Ridge, Illinois thinking about what's next. I fortunately live close to Chicago, a large city with many junior data science position postings. Reading some of these postings at the time, I thought that the skills and knowledge they required were not far off from what I currently had:  
 
-  * Bachelor's degree in something quantitative? Check 
-  * Knowledge and experience with Python? Check 
-  * Working with analyzing large data sets and communicating results? Check a
+  * Bachelor's degree in something quantitative? <span class="red">Check</span>   
+  * Knowledge and experience with Python? <span class="red">Check</span>   
+  * Working with analyzing large data sets and communicating results? <span class="red">Check</span>    
 
 How do I get my foot in the door with what I have? There are countless resources online that cover data science and help with building a portfolio, however, thinking about how I learn and retain information best, some sort of outside structure or mentorship would benefit me more. The mentorship and structure of a data science bootcamp sounded like a good fit for me. My own further research led me to Metis.
 
