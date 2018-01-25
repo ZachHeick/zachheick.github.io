@@ -21,7 +21,7 @@ To combine the functionality of individual song-based playlist generators with a
 
 The data used in this project was collected from multiple sources. I scraped a list of hip-hop artists from Wikipedia, and then used the Spotify API to get metadata for the song of each artist. This metadata included the song's audio preview, album art, as well as other song metrics. These song metrics (energy, tempo, and speechiness) combined with subjectivity and polarity values from sentiment analysis of each song where used as features and quantified what the mood of a song was. To get the song lyrics, I used [PyLyrics](https://pypi.python.org/pypi/PyLyrics/) to scrape song lyrics from the Lyrics Wiki website.  
 
-All of my data was stored in a PostgreSQL database hosted by Amazon Web Services. After removing duplicates and songs with missing data points, I had a corpus of 19831 songs.  
+All of my data was stored in a PostgreSQL database hosted by Amazon Web Services. After removing duplicates and songs with missing data points, I had a corpus of 29616 songs.  
 
 ## Training the Model  
 
