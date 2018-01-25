@@ -1,6 +1,6 @@
 --- 
 layout: post 
-title: How I Got Here
+title: Hello World
 --- 
 
 I graduated from Michigan State University in May 2017 with a bachelor's of science in computer science. While I was earning my degree, I enjoyed taking classes covering various topics of computer science and software developement and gaining relevant experience outside of the classroom through internships. I also love math! I wanted to explore other topics in math outside the required calculus courses and took extra classes such as Linear Algebra, Matrix Algrebra, Abstract Algebra / Number Theory, and Statistics. These classes where all great, but how could I leverage what I've learned and combine that with my computer science knowledge?  
