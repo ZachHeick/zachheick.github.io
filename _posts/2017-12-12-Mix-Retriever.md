@@ -61,4 +61,8 @@ Moving forward, I would like to get more songs, including songs from other genre
 
 ## Project Source  
 
-The source code can be found on my [github](https://github.com/ZachHeick/Project_Kojak).
+The source code can be found on my [github](https://github.com/ZachHeick/Project_Kojak).  
+
+Updates since December 2017:  
+
+  * Included songs from hip-hop groups, increasing the number of songs from 19831 to 29616.  
